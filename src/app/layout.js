@@ -6,7 +6,6 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { store } from "@/store/sotres";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
