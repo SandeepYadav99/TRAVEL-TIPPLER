@@ -3,7 +3,7 @@ const CATEGORYs = [
     id: 1,
     image:
       "https://www.traveltippler.com/wp-content/uploads/2023/07/solo-traveler-400x266.jpg",
-    category: "Health & Travel",
+    category: "Health Travel",
     heading: "8 Travel Tips for Introverts: Solo Travel at Your Own Pace",
     aurther: "Bhawna",
     date: "july 22, 2023",
