@@ -7,6 +7,8 @@ import Travel from "@/assets/Banner/solo-traveler.jpg";
 import manali from "@/assets/Banner/manali.jpg";
 import ImgNext from "@/assets/next.svg";
 import ImgPrev from "@/assets/prev.svg";
+import Link from "next/link";
+
 const Banner = () => {
   const slider = useRef();
 
@@ -28,11 +30,11 @@ const Banner = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
   };
 
   return (
-    <div className="xl:w-full flex justify-center items-center mt-4 relative">
+    <div className="lg:w-full flex justify-center items-center mt-4 relative">
       <div className=" absolute z-10 left-[10%]">
         <button className="cursor-pointer p-2 bg-teal-900" onClick={previous}>
           <Image src={ImgPrev} alt="Travel" />
@@ -41,21 +43,28 @@ const Banner = () => {
       <div className="w-[80%]  ">
         <Slider {...settings} ref={slider} className="cursor-pointer">
           <div className="">
-            <div className="flex justify-center items-center  ">
-              <Image
-                src={BannerPage}
-                alt="banner"
-                className=" w-full h-[60vh] rounded-lg xl:w-full"
-              />
+            <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
+              <div className="md:w-full md:mr-4">
+                <Image
+                  src={BannerPage}
+                  alt="banner"
+                  className=" w-full h-[60vh] rounded-lg xl:w-full"
+                />
+              </div>
             </div>
-            <div className="absolute -mt-[1%] ml-5  ">
-              <a className="bg-blue-600 text-2xl p-2 rounded-md text-white">
-                Travel Blogs
-              </a>
-              <p className="text-white text-3xl mt-5 ">
-                5 Best Places to visit in Varanasi – The spiritual capital of
-                India
-              </p>
+            <div className="absolute -mt-[1%] ml-5  flex justify-center items-start  ">
+              <div className="sm:-mt-[5%] ">
+                <Link
+                  href={"category/travel-blogs"}
+                  className="bg-blue-600 text-2xl p-2 rounded-md text-white"
+                >
+                  Travel Blogs
+                </Link>
+                <p className="text-white text-2xl mt-3 md:text-3xl text-justify">
+                  5 Best Places to visit in Varanasi – The spiritual capital of
+                  India
+                </p>
+              </div>
             </div>
           </div>
           <div className="">
@@ -67,12 +76,17 @@ const Banner = () => {
               />
             </div>
             <div className="absolute -mt-[1%] ml-5 ">
-              <a className="bg-blue-600 text-2xl p-2 rounded-md text-white">
-                Health & Travel
-              </a>
-              <p className="text-white text-3xl mt-5">
-                8 Travel Tips for Introverts: Solo Travel at Your Own Pace
-              </p>
+              <div className="sm:-mt-[5%] ">
+                <Link
+                  href={"category/health-travel"}
+                  className="bg-blue-600 text-2xl p-2 rounded-md text-white"
+                >
+                  Health & Travel
+                </Link>
+                <p className="text-white text-3xl mt-5 text-justify">
+                  8 Travel Tips for Introverts: Solo Travel at Your Own Pace
+                </p>
+              </div>
             </div>
           </div>
           <div className="">
@@ -84,13 +98,18 @@ const Banner = () => {
               />
             </div>
             <div className="absolute -mt-[1%] ml-5 ">
-              <a className="bg-blue-600 text-2xl p-2 rounded-md text-white">
-                Travel Itinerary
-              </a>
-              <p className="text-white text-3xl mt-5">
-                Experiencing Manali: A 5-Day Travel Itinerary for Adventure and
-                Tranquility
-              </p>
+              <div className="sm:-mt-[5%]">
+                <Link
+                  href={"category/travel-itinerary"}
+                  className="bg-blue-600 text-2xl p-2 rounded-md text-white"
+                >
+                  Travel Itinerary
+                </Link>
+                <p className="text-white  text-3xl mt-5  ">
+                  Experiencing Manali: A 5-Day Travel Itinerary for Adventure
+                  and Tranquility
+                </p>
+              </div>
             </div>
           </div>
         </Slider>
