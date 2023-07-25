@@ -53,3 +53,26 @@ export const IconSearch = ({ width, height, fill }) => {
     </svg>
   );
 };
+
+export const IconClose = ({ width, height, fill }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width || 20.5}
+      height={height || 20.5}
+      viewBox="0 0 20.5 20.5"
+    >
+      <g id="Close" transform="translate(0.25 0.25)">
+        <path
+          id="Path_7779"
+          data-name="Path 7779"
+          d="M11.768,10l7.866-7.866A1.25,1.25,0,0,0,17.866.366h0L10,8.233,2.135.366A1.25,1.25,0,0,0,.366,2.135L8.233,10,.366,17.866a1.25,1.25,0,0,0,1.768,1.768L10,11.768l7.866,7.866a1.25,1.25,0,1,0,1.768-1.768Z"
+          transform="translate(0 0)"
+          fill={fill || "#fff"}
+          stroke="#fff"
+          strokeWidth="0.5"
+        />
+      </g>
+    </svg>
+  );
+};

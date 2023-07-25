@@ -1,10 +1,10 @@
 "use client";
-
 import Image from "next/image";
 import logo from "@/assets/Travel-Tippler-1.png";
-import { IconHamburger } from "../global/Icons";
+import { IconClose, IconHamburger } from "../global/Icons";
 import ImgSearch from "@/assets/search.svg";
 import { useState } from "react";
+import Link from "next/link";
 
 const Header = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
@@ -19,15 +19,27 @@ const Header = () => {
 
   return (
     <header className="top-0 left-0  right-0 nw-full  bg-white text-black py-4 px-6 shadow-md flex justify-around items-center">
-      <div>
+      <Link href={"/"}>
         <Image src={logo} alt="logo" width={350} height={350} />
-      </div>
+      </Link>
       <nav className="xl:flex items-center hidden">
-        <div className="mr-4 text-2xl">Home</div>
-        <div className="mr-4 text-2xl">Itinerary</div>
-        <div className="mr-4 text-2xl">Web Story</div>
-        <div className="mr-4 text-2xl">Web Story</div>
-        <div className="mr-4 text-2xl">About Us</div>
+        <div className="mr-4 text-2xl">
+          <Link href={"/"}>Home</Link>
+        </div>
+        <div className="mr-4 text-2xl">
+          {" "}
+          <Link href={"https://www.zingbus.com/"}>Zingbus</Link>
+        </div>
+        <div className="mr-4 text-2xl">
+          {" "}
+          <Link href={"/itinerary"}>Itinerary</Link>
+        </div>
+        <div className="mr-4 text-2xl">
+          <Link href={"/web-story"}>Web Story</Link>
+        </div>
+        <div className="mr-4 text-2xl">
+          <Link href={"/about-us"}>About Us</Link>
+        </div>
       </nav>
       <div>
         <div className="xl:flex items-center justify-center hidden">
@@ -62,17 +74,41 @@ const Header = () => {
       >
         <div className="flex justify-between ">
           <div className="bg-white text-black py-2 px-4 ">
-            <div className="block my-2 text-2xl">Home</div>
-            <div className="block my-2 text-2xl">Itinerary</div>
-            <div className="block my-2 text-2xl">Web Story</div>
-            <div className="block my-2 text-2xl">Web Story</div>
-            <div className="block my-2 text-2xl">About Us</div>
+            <div className="mr-4 text-2xl">
+              <Link href={"/"} onClick={closeHandler}>
+                Home
+              </Link>
+            </div>
+            <div className="mr-4 text-2xl">
+              {" "}
+              <Link href={"https://www.zingbus.com/"} onClick={closeHandler}>
+                Zingbus
+              </Link>
+            </div>
+            <div className="mr-4 text-2xl">
+              {" "}
+              <Link href={"/itinerary"} onClick={closeHandler}>
+                Itinerary
+              </Link>
+            </div>
+            <div className="mr-4 text-2xl">
+              <Link href={"/web-story"} onClick={closeHandler}>
+                Web Story
+              </Link>
+            </div>
+            <div className="mr-4 text-2xl">
+              <Link href={"/about-us"} onClick={closeHandler}>
+                About Us
+              </Link>
+            </div>
           </div>
           <button
-            className={`xl:hidden  ${mobileMenuVisible ? "block " : "hidden"}`}
+            className={`xl:hidden  ${
+              mobileMenuVisible ? "block -mt-[10%]" : "hidden"
+            }`}
             onClick={closeHandler}
           >
-            Close
+            <IconClose fill={"black"} />
           </button>
         </div>
       </div>
