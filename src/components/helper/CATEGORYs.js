@@ -60,4 +60,4 @@ const CATEGORYs = [
   },
 ];
 
-export default CATEGORYs;
+export default CATEGORYs
