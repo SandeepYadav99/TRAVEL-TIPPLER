@@ -34,13 +34,13 @@ const Banner = () => {
   };
 
   return (
-    <div className="lg:w-full flex justify-center items-center mt-4 relative">
-      <div className=" absolute z-10 left-[10%]">
+    <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
+      {/* <div className=" absolute z-10 lg:left-[10%] right-0 left-0">
         <button className="cursor-pointer p-2 bg-teal-900" onClick={previous}>
           <Image src={ImgPrev} alt="Travel" />
         </button>
-      </div>
-      <div className="w-[80%]  ">
+      </div> */}
+      <div className="w-full lg:w-[80%] mt-[4%] lg:mt-[2%] p-3 ">
         <Slider {...settings} ref={slider} className="cursor-pointer">
           <div className="">
             <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
@@ -60,10 +60,12 @@ const Banner = () => {
                 >
                   Travel Blogs
                 </Link>
-                <p className="text-white text-2xl mt-3 md:text-3xl text-justify">
-                  5 Best Places to visit in Varanasi – The spiritual capital of
-                  India
-                </p>
+                <div className="overflow-hidden ">
+                  <p className="text-white mt-8  break-words md:text-3xl text-xl  ">
+                    5 Best Places to visit in Varanasi – The spiritual capital
+                    of India
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -114,11 +116,11 @@ const Banner = () => {
           </div>
         </Slider>
       </div>
-      <div className="p-2 bg-teal-900 z-10 -ml-6">
+      {/* <div className="p-2 bg-teal-900 z-10   right-0  left-0">
         <button className="cursor-pointer" onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

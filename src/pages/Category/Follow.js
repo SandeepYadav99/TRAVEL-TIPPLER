@@ -3,7 +3,7 @@ import React from "react";
 const Follow = () => {
   return (
     <div className="">
-      <div className="flex justify-between border-2 shadow-md mr-40">
+      <div className="flex justify-between  lg:flex-row flex-row border-2 shadow-md m-4  lg:mr-40">
         <div className="m-6">
           <li>Facebook</li>
           <li>Instagram</li>

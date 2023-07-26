@@ -22,7 +22,7 @@ const Header = () => {
       <Link href={"/"}>
         <Image src={logo} alt="logo" width={350} height={350} />
       </Link>
-      <nav className="xl:flex items-center hidden">
+      <nav className="lg:flex items-center hidden">
         <div className="mr-4 text-2xl">
           <Link href={"/"}>Home</Link>
         </div>
@@ -42,7 +42,7 @@ const Header = () => {
         </div>
       </nav>
       <div>
-        <div className="xl:flex items-center justify-center hidden">
+        <div className="lg:flex items-center justify-center hidden">
           <input
             className="border-2 p-3 rounded-md"
             type="search"
@@ -54,21 +54,21 @@ const Header = () => {
               src={ImgSearch}
               alt="travil"
               height={"24px"}
-              className=""
+              className="lg:p-3 "
               color="white"
             />
           </button>
         </div>
       </div>
       <button
-        className="flex items-center border-2 p-2 rounded xl:hidden"
+        className="flex items-center border-2 p-2 rounded lg:hidden"
         onClick={openHandler}
       >
         <IconHamburger fill={"black"} />
       </button>
 
       <div
-        className={`xl:hidden fixed top-0 left-0 w-full h-full bg-white text-black py-2 px-4 ${
+        className={`lg:hidden fixed top-0 left-0 w-full h-full bg-white text-black py-2 px-4 ${
           mobileMenuVisible ? "block w-full h-full z-10" : "hidden"
         }  `}
       >
@@ -103,7 +103,7 @@ const Header = () => {
             </div>
           </div>
           <button
-            className={`xl:hidden  ${
+            className={`lg:hidden  ${
               mobileMenuVisible ? "block -mt-[10%]" : "hidden"
             }`}
             onClick={closeHandler}

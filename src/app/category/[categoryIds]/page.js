@@ -1,21 +1,23 @@
 "use client";
 import React from "react";
 import { useParams, useRouter } from "next/navigation";
-import formatCategoryName from "@/components/hooks/ConvertSmall";
 import CATEGORYs from "@/components/helper/CATEGORYs";
-import ConvertCaps from "@/components/hooks/ConvertCaps";
+
 import Image from "next/image";
 import Link from "next/link";
 import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
+import formatCategory from "@/components/hooks/ConvertSmall";
+import useCategoryName from "@/components/hooks/ConvertCaps";
+
 const CategoryIds = () => {
   const params = useParams();
   const router = useRouter();
-  const paramsList = formatCategoryName(params?.categoryIds);
+  const paramsList = formatCategory(params.categoryIds);
 
-  const categoryHandler = (id) => {
-    // router.push(`/${id}`);
+  const categoryHandler = (category) => {
+      router.push(`/category/${params.categoryIds}/${category.id}`);
   };
-
+// 
   return (
     <div className="mt-6">
       <div className="bg-white shadow-lg border-2 w-full lg:w-[60%]  ml-[10%] ">
@@ -24,7 +26,7 @@ const CategoryIds = () => {
         </div>
         <hr className="m-6" />
         {CATEGORYs.map((cagte, index) => {
-        
+          
           if (cagte.category === paramsList) {
             return (
               <div key={cagte.id} className="flex justify-between   m-4 ">
@@ -45,7 +47,8 @@ const CategoryIds = () => {
                 </div>
                 <div className="ml-4">
                   <a
-                    onClick={() => categoryHandler(cagte.id)}
+                    // href={`/category/${categoryType}/${cagte.id}`}
+                    onClick={() => categoryHandler(cagte)}
                     className="text-2xl font-bold mt-2 hover:text-blue-600 cursor-pointer"
                   >
                     {cagte.heading}
@@ -54,7 +57,9 @@ const CategoryIds = () => {
                     <p className=" text-black">{cagte.aurther}</p>
                     <p className="font-bold ml-4">{cagte.date}</p>
                   </div>
-                  <p className="mt-5 text-xl">{getFirstTwoLines(cagte.detail.description)}...</p>
+                  <p className="mt-5 text-xl">
+                    {getFirstTwoLines(cagte.detail.description)}...
+                  </p>
                 </div>
               </div>
             );
