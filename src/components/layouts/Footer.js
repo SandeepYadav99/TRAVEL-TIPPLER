@@ -73,7 +73,7 @@ const Footer = () => {
             height="30"
             width="30"
             alt="Twitter"
-            className="cursor-pointer"
+            className="cursor-pointer transition-transform transform hover:scale-110 "
           />
         </a>
         <a>
@@ -82,7 +82,7 @@ const Footer = () => {
             height="30"
             width="30"
             alt="Instagram"
-            className="cursor-pointer"
+            className="cursor-pointer transition-transform transform hover:scale-110"
           />
         </a>
         <a>
@@ -91,7 +91,7 @@ const Footer = () => {
             height="30"
             width="30"
             alt="Facebook"
-            className="cursor-pointer"
+            className="cursor-pointer transition-transform transform hover:scale-110"
           />
           Facebook
         </a>
@@ -101,7 +101,7 @@ const Footer = () => {
             height="30"
             width="30"
             alt="Twitter"
-            className="cursor-pointer"
+            className="cursor-pointer transition-transform transform hover:scale-110"
           />
         </a>
         <a>
@@ -110,7 +110,7 @@ const Footer = () => {
             height="30"
             width="30"
             alt="Instagram"
-            className="cursor-pointer"
+            className="cursor-pointer transition-transform transform hover:scale-110"
           />
         </a>
         <a>
@@ -119,7 +119,7 @@ const Footer = () => {
             height="30"
             width="30"
             alt="Facebook"
-            className="cursor-pointer"
+            className="cursor-pointer transition-transform transform hover:scale-110"
           />
         </a>
       </ul>

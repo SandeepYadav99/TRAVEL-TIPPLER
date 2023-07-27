@@ -3,6 +3,7 @@ import React from "react";
 import Twitter from "@/assets/twitter.svg";
 import Instagram from "@/assets/instagram.svg";
 import Facebook from "@/assets/facbook.svg";
+
 const Follow = () => {
   return (
     <div className="shadow-md border-2  m-4  lg:w-[33.5rem] lg:h-[35vh] lg:mr-40">

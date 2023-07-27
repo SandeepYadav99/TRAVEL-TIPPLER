@@ -11,12 +11,6 @@ import CategorysList from "./CategorysList";
 import useCategoryName from "@/components/hooks/ConvertCaps";
 
 const Category = () => {
-  const router = useRouter();
-
-  const categoryHandler = (category) => {
-    const converted = category.category.toLowerCase().replace(/ /g, "-");
-    router.push(`categoryType/${category.id}`);
-  };
 
   const wordLength = (detail) => {
     if (detail) {
@@ -24,6 +18,7 @@ const Category = () => {
       return word;
     }
   };
+  
   return (
     <div className="p-4 flex flex-col justify-between w-full lg:flex-row   lg:-mt-12 ">
       <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]   lg:ml-[10%]  ">
