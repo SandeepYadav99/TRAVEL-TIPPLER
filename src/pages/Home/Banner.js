@@ -35,16 +35,16 @@ const Banner = () => {
 
   return (
     <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
-      {/* <div className=" absolute z-10 lg:left-[10%] right-0 left-0">
+      <div className=" absolute z-10 lg:left-[9%] ml-8 right-0 left-0 ">
         <button className="cursor-pointer p-2 bg-teal-900" onClick={previous}>
           <Image src={ImgPrev} alt="Travel" />
         </button>
-      </div> */}
+      </div>
       <div className="w-full lg:w-[80%] mt-[4%] lg:mt-[2%] p-3 ">
         <Slider {...settings} ref={slider} className="cursor-pointer">
           <div className="">
             <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
-              <div className="md:w-full md:mr-4">
+              <div className="md:w-full md:mr-4 ">
                 <Image
                   src={BannerPage}
                   alt="banner"
@@ -59,7 +59,7 @@ const Banner = () => {
                   className="bg-blue-600 text-2xl p-2 rounded-md text-white"
                 >
                   Travel Blogs
-                </Link> 
+                </Link>
                 <div className="">
                   <Link
                     href={"/category/travel-blogs/1"}
@@ -128,11 +128,11 @@ const Banner = () => {
           </div>
         </Slider>
       </div>
-      {/* <div className="p-2 bg-teal-900 z-10   right-0  left-0">
-        <button className="cursor-pointer" onClick={next}>
+      <div className="p-2 bg-teal-900 z-10  lg:-ml-[2%] -ml-11 right-0  left-0">
+        <button className="cursor-pointer " onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
-      </div> */}
+      </div>
     </div>
   );
 };
