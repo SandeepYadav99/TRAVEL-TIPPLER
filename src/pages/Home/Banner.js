@@ -53,18 +53,21 @@ const Banner = () => {
               </div>
             </div>
             <div className="absolute -mt-[1%] ml-5  flex justify-center items-start  ">
-              <div className="sm:-mt-[5%] ">
+              <div className="lg:-mt-[5%] -mt-[15%]">
                 <Link
                   href={"category/travel-blogs"}
                   className="bg-blue-600 text-2xl p-2 rounded-md text-white"
                 >
                   Travel Blogs
-                </Link>
-                <div className="overflow-hidden ">
-                  <p className="text-white mt-8  break-words md:text-3xl text-xl  ">
-                    5 Best Places to visit in Varanasi – The spiritual capital
-                    of India
-                  </p>
+                </Link> 
+                <div className="">
+                  <Link
+                    href={"/category/travel-blogs/1"}
+                    className="text-white mt-2  break-words md:text-3xl text-xl  "
+                  >
+                    5 Best Places to visit in Varanasi – <br /> The spiritual
+                    capital of India
+                  </Link>
                 </div>
               </div>
             </div>
@@ -78,16 +81,21 @@ const Banner = () => {
               />
             </div>
             <div className="absolute -mt-[1%] ml-5 ">
-              <div className="sm:-mt-[5%] ">
+              <div className="lg:-mt-[5%] -mt-[15%] ">
                 <Link
                   href={"category/health-travel"}
                   className="bg-blue-600 text-2xl p-2 rounded-md text-white"
                 >
                   Health & Travel
+                </Link>{" "}
+                <br />
+                <Link
+                  href={"/category/health-travel/2"}
+                  className="text-white text-3xl mt-2 text-justify"
+                >
+                  8 Travel Tips for Introverts: Solo <br /> Travel at Your Own
+                  Pace
                 </Link>
-                <p className="text-white text-3xl mt-5 text-justify">
-                  8 Travel Tips for Introverts: Solo Travel at Your Own Pace
-                </p>
               </div>
             </div>
           </div>
@@ -100,17 +108,21 @@ const Banner = () => {
               />
             </div>
             <div className="absolute -mt-[1%] ml-5 ">
-              <div className="sm:-mt-[5%]">
+              <div className="-mt-[15%] lg:-mt-[5%] ">
                 <Link
                   href={"category/travel-itinerary"}
-                  className="bg-blue-600 text-2xl p-2 rounded-md text-white"
+                  className="bg-blue-600  text-2xl p-2 rounded-md text-white"
                 >
                   Travel Itinerary
+                </Link>{" "}
+                <br />
+                <Link
+                  href={"/category/travel-itinerary/3"}
+                  className="text-white -mt-2 text-3xl break-words  "
+                >
+                  Experiencing Manali: A 5-Day Travel Itinerary for <br />{" "}
+                  Adventure and Tranquility
                 </Link>
-                <p className="text-white  text-3xl mt-5  ">
-                  Experiencing Manali: A 5-Day Travel Itinerary for Adventure
-                  and Tranquility
-                </p>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import CATEGORYs from "@/components/helper/CATEGORYs";
+import formatCategory from "@/components/hooks/ConvertSmall";
 import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -6,10 +7,12 @@ import React from "react";
 
 const RecentPost = () => {
   const router = useRouter();
+
   const categoryHandler = (category) => {
-    console.log(category.id);
-    //  const converted = category.category.toLowerCase().replace(/ /g, "-");
-    router.push(`categoryType/${category.id}`);
+  //  const formater = formatCategory()
+    const converted = category.category.toLowerCase().replace(/ /g, "-");
+   
+    router.push(`/category/${converted}/${category.id}`);
   };
 
   return (

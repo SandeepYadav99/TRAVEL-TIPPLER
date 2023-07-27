@@ -68,13 +68,13 @@ const Header = () => {
       </button>
 
       <div
-        className={`lg:hidden fixed top-0 left-0 w-full h-full bg-white text-black py-2 px-4 ${
+        className={`lg:hidden  fixed top-0 left-0 w-full h-full bg-white text-black py-2 px-4 ${
           mobileMenuVisible ? "block w-full h-full z-10" : "hidden"
         }  `}
       >
         <div className="flex justify-between ">
           <div className="bg-white text-black py-2 px-4 ">
-            <div className="mr-4 text-2xl">
+            <div className="mr-4 text-2xl ">
               <Link href={"/"} onClick={closeHandler}>
                 Home
               </Link>
