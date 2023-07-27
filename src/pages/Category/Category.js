@@ -30,8 +30,8 @@ const Category = () => {
         {CATEGORYs.map((category, index) => {
           const categoryType = useCategoryName(category.category);
           return (
-            <>
-              <div key={category.id} className="flex justify-between   m-4 ">
+            <div key={category.id}>
+              <div className="flex justify-between   m-4 ">
                 <div className="relative m-3 cursor-pointer ">
                   <Image
                     src={category.image}
@@ -65,7 +65,7 @@ const Category = () => {
                 </div>
               </div>
               <hr className="m-[4%]" />
-            </>
+            </div>
           );
         })}
       </div>
