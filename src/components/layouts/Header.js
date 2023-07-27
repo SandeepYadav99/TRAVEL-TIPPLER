@@ -49,13 +49,12 @@ const Header = () => {
             placeholder="Search "
             aria-label="Search"
           />
-          <button className=" bg-blue-300 p-3" type="submit">
+          <button className=" bg-blue-400 p-3" type="submit">
             <Image
               src={ImgSearch}
               alt="travil"
-              height={"24px"}
-              className="lg:p-3 "
-              
+              height={24}
+              className=""
             />
           </button>
         </div>
