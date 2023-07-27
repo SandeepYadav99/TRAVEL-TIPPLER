@@ -5,8 +5,6 @@ import CATEGORYs from "@/components/helper/CATEGORYs";
 import Image from "next/image";
 import Link from "next/link";
 import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
-import formatCategory from "@/components/hooks/ConvertSmall";
-import useCategoryName from "@/components/hooks/ConvertCaps";
 import Follow from "@/pages/Category/Follow";
 import RecentPost from "@/pages/Category/RecentPost";
 import CategorysList from "@/pages/Category/CategorysList";
@@ -22,7 +20,7 @@ const Itinerary = () => {
   // const paramsList = formatCategory(params.categoryIds);
 
   const categoryHandler = (category) => {
-    router.push(`/category/${params.categoryIds}/${category.id}`);
+    router.push(`/category/travel-itinerary/${category.id}`);
   };
   //
   return (
@@ -48,7 +46,7 @@ const Itinerary = () => {
                       height={700}
                     />
                     <Link
-                      href={``}
+                      href={`/category/travel-itinerary`}
                       className="absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
                     >
                       {cagte.category}
