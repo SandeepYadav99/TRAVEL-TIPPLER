@@ -55,7 +55,7 @@ const Header = () => {
               alt="travil"
               height={"24px"}
               className="lg:p-3 "
-              color="white"
+              
             />
           </button>
         </div>
@@ -69,7 +69,7 @@ const Header = () => {
 
       <div
         className={`lg:hidden m-4 fixed top-0 left-0 w-full h-full bg-white text-black py-2 px-4 ${
-          mobileMenuVisible ? "block w-full h-full z-10" : "hidden"
+          mobileMenuVisible ? "block w-full h-full z-" : "hidden"
         }  `}
       >
         <div className="flex justify-between ">

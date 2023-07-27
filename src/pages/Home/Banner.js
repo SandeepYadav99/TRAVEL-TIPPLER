@@ -35,7 +35,7 @@ const Banner = () => {
 
   return (
     <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
-      <div className=" absolute z-10 lg:left-[9%] ml-8 right-0 left-0 ">
+      <div className=" absolute z-10 lg:left-[9%] ml-8 right-0 left-0 overflow-hidden">
         <button className="cursor-pointer p-2 bg-teal-900" onClick={previous}>
           <Image src={ImgPrev} alt="Travel" />
         </button>
