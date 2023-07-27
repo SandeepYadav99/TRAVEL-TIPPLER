@@ -5,7 +5,7 @@ import Instagram from "@/assets/instagram.svg";
 import Facebook from "@/assets/facbook.svg";
 const Follow = () => {
   return (
-    <div className="shadow-md border-2  m-4  lg:w-[33.5rem] lg:h-[35vh]">
+    <div className="shadow-md border-2  m-4  lg:w-[33.5rem] lg:h-[35vh] lg:mr-40">
       <h1 className="text-2xl font-bold ml-4 mt-2">Follow Us</h1>
       <hr className="m-4" />
       <div className="flex justify-between items-center flex-wrap lg:grid lg:grid-cols-2 m-[2%] ">

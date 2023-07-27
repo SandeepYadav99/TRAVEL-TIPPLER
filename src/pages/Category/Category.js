@@ -25,8 +25,8 @@ const Category = () => {
     }
   };
   return (
-    <div className="p-4 flex flex-col justify-between w-[100%] lg:flex-row  mx-auto lg:-mt-12 ">
-      <div className="bg-white shadow-lg border-2 w- lg:w-[80%]   lg:ml-[6%]  ">
+    <div className="p-4 flex flex-col justify-between w-full lg:flex-row   lg:-mt-12 ">
+      <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]   lg:ml-[10%]  ">
         {CATEGORYs.map((category, index) => {
           const categoryType = useCategoryName(category.category);
           return (
@@ -42,7 +42,7 @@ const Category = () => {
                   />
                   <Link
                     href={`category/${categoryType}`}
-                    className="lg:block hidden absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
+                    className="th:block hidden absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
                   >
                     {category.category}
                   </Link>
