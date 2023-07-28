@@ -50,12 +50,7 @@ const Header = () => {
             aria-label="Search"
           />
           <button className=" bg-blue-400 p-3" type="submit">
-            <Image
-              src={ImgSearch}
-              alt="travil"
-              height={24}
-              className=""
-            />
+            <Image src={ImgSearch} alt="travil" height={24} className="" />
           </button>
         </div>
       </div>
@@ -67,8 +62,8 @@ const Header = () => {
       </button>
 
       <div
-        className={`lg:hidden m-4 fixed top-0 left-0 w-full h-full bg-white text-black py-2 px-4 ${
-          mobileMenuVisible ? "block w-full h-full z-" : "hidden"
+        className={`lg:hidden m-4 fixed top-0 left-0 w-full h-full mx-auto bg-white text-black py-2 px-4 ${
+          mobileMenuVisible ? "block w-full h-full z-20 " : "hidden"
         }  `}
       >
         <div className="flex justify-between ">

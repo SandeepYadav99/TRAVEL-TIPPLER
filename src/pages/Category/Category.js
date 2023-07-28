@@ -10,7 +10,8 @@ import CategorysList from "./CategorysList";
 import useCategoryName from "@/components/hooks/ConvertCaps";
 import Tags from "./Tags";
 
-const Category = () => {
+const Category = ({ post_datas }) => {
+  console.log(post_datas)
 
   const wordLength = (detail) => {
     if (detail) {
@@ -18,7 +19,7 @@ const Category = () => {
       return word;
     }
   };
-  
+
   return (
     <div className="p-4 flex flex-col justify-between w-full lg:flex-row   lg:-mt-12 ">
       <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]   lg:ml-[10%]  ">
@@ -69,7 +70,7 @@ const Category = () => {
         <Follow />
         <RecentPost />
         <CategorysList />
-        <Tags/>
+        <Tags />
       </div>
     </div>
   );

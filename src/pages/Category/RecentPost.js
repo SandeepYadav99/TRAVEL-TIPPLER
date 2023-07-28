@@ -27,7 +27,7 @@ const RecentPost = () => {
                 <div className="relative m-3 cursor-pointer">
                   <Image
                     src={category.image}
-                    className="rounded-md "
+                    className="rounded-md float-left"
                     alt="Travel"
                     width={300}
                     height={300}
@@ -41,7 +41,7 @@ const RecentPost = () => {
                     {category.heading}
                   </a>
                   <div className=" mt-2  text-gray-400">
-                    <p className="font-bold ml-4">{category.date}</p>
+                    <p className="font-bold ml-4 clear-right">{category.date}</p>
                   </div>
                 </div>
               </div>
