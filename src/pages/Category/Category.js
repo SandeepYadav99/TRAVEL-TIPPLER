@@ -3,12 +3,12 @@ import CATEGORYs from "@/components/helper/CATEGORYs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/navigation";
 import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
 import Follow from "./Follow";
 import RecentPost from "./RecentPost";
 import CategorysList from "./CategorysList";
 import useCategoryName from "@/components/hooks/ConvertCaps";
+import Tags from "./Tags";
 
 const Category = () => {
 
@@ -69,6 +69,7 @@ const Category = () => {
         <Follow />
         <RecentPost />
         <CategorysList />
+        <Tags/>
       </div>
     </div>
   );
