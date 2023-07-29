@@ -57,14 +57,14 @@ const Banner = () => {
             <div className="absolute md:-mt-[1%] bottom-10 ml-11">
               <button
                 onClick={() => router.push("/category/travel-blogs")}
-                className="bg-blue-500 text-white rounded hover:text-gray-400 cursor-pointer px-4 py-2"
+                className="bg-blue-500 text-white rounded hover:bg-gray-400 hover:text-white cursor-pointer px-4 py-2"
               >
                 Travel Blogs
               </button>
               <Link href={"/category/travel-blogs/1"}>
                 <p className="text-white text-2xl">
-                  5 Best Places to visit in Varanasi – The spiritual capital of
-                  India
+                  5 Best Places to visit in Varanasi – The spiritual <br />{" "}
+                  capital of India
                 </p>
               </Link>
             </div>
@@ -80,7 +80,7 @@ const Banner = () => {
             <div className="absolute md:-mt-[1%] ml-5 bottom-10">
               <button
                 onClick={() => router.push("/category/health-travel")}
-                className="bg-blue-500 text-white rounded hover:text-gray-400 cursor-pointer p-2"
+                className="bg-blue-500 text-white rounded hover:bg-gray-400 hover:text-whitecursor-pointer p-2"
               >
                 Health & Travel
               </button>
@@ -103,14 +103,14 @@ const Banner = () => {
             <div className="absolute md:-mt-[1%] ml-5 bottom-10">
               <button
                 onClick={() => router.push("/category/travel-itinerary")}
-                className="bg-blue-500 text-white rounded hover:text-gray-400 cursor-pointer p-2"
+                className="bg-blue-500 text-white rounded hover:bg-gray-400 hover:text-whitecursor-pointer p-2"
               >
                 Travel Itinerary
               </button>
               <Link href={"/category/travel-itinerary"}>
                 <p className="text-white text-2xl">
-                  Experiencing Manali: A 5-Day Travel Itinerary for Adventure{" "}
-                  <br /> and Tranquility
+                  Experiencing Manali: A 5-Day Travel Itinerary for <br />{" "}
+                  Adventure and Tranquility
                 </p>
               </Link>
             </div>

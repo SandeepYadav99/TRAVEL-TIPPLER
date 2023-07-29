@@ -37,7 +37,7 @@ const Category = () => {
                   />
                   <Link
                     href={`category/${categoryType}`}
-                    className="th:block hidden absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
+                    className="th:block hidden  absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
                   >
                     {category.category}
                   </Link>
@@ -50,7 +50,7 @@ const Category = () => {
                   >
                     {category.heading}
                   </Link>
-                  <div className="flex mt-2 text-xl text-gray-400">
+                  <div className="flex mt-2 text-xl text-gray-400 ">
                     <p className=" text-black">{category.aurther}</p>
                     <p className="font-bold ml-4">{category.date}</p>
                   </div>
