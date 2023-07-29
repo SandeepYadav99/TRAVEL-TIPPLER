@@ -42,7 +42,7 @@ const Category = () => {
                     {category.category}
                   </Link>
                 </div>
-                <div className="ml-2 mt-2">
+                <div className="ml-2 mt-2 ">
                   <Link
                     href={`/category/${categoryType}/${category.id}`}
                     // onClick={() => categoryHandler(category)}
