@@ -17,63 +17,69 @@ const CategoryIds = () => {
   const router = useRouter();
   const paramsList = formatCategory(params.categoryIds);
 
-  const categoryHandler = (category) => {
-      router.push(`/category/${params.categoryIds}/${category.id}`);
+  const wordLength = (detail) => {
+    if (detail) {
+      const word = getFirstTwoLines(detail);
+      return word;
+    }
   };
-// 
+
   return (
-    <div className="flex flex-col justify-between w-[100%] lg:flex-row   ]">
-      <div className="mt-6 ">
-        <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]  lg:ml-[10%] ">
-          <div className="mt-4">
-            <h1 className="text-2xl font-bold ml-[2%]">{paramsList}</h1>
-          </div>
-          <hr className="m-6" />
-          {CATEGORYs.map((cagte, index) => {
-            if (cagte.category === paramsList) {
-              return (
-                <div key={cagte.id} className="flex justify-between   m-4 ">
-                  <div className="relative m-3 cursor-pointer">
+    <div className="md:flex md:justify-between mx-[5%] md:mt-2">
+      <div className="">
+        <div className="mt-4">
+          <h1 className="text-2xl font-bold ml-[2%]">{paramsList}</h1>
+        </div>
+        <hr className="m-6" />
+
+        {CATEGORYs.map((category, index) => {
+          const categoryType = useCategoryName(category.category);
+          if (category.category === paramsList) {
+            return (
+              <div key={category.id}>
+                <div className="flex justify-between   m-4 ">
+                  <div className="relative m-3 cursor-pointer ">
                     <Image
-                      src={cagte.image}
+                      src={category.image}
                       className="rounded-md "
                       alt="Travel"
-                      width={700}
-                      height={700}
+                      width={600}
+                      height={600}
                     />
                     <Link
-                      href={``}
-                      className="absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
+                      href={`category/${categoryType}`}
+                      className="th:block hidden  absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
                     >
-                      {cagte.category}
+                      {category.category}
                     </Link>
                   </div>
-                  <div className="ml-4">
-                    <a
-                      // href={`/category/${categoryType}/${cagte.id}`}
-                      onClick={() => categoryHandler(cagte)}
-                      className="text-2xl font-bold  hover:text-blue-600 cursor-pointer"
+                  <div className="ml-2 mt-2 ">
+                    <Link
+                      href={`/category/${categoryType}/${category.id}`}
+                      // onClick={() => categoryHandler(category)}
+                      className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer"
                     >
-                      {cagte.heading}
-                    </a>
-                    <div className="flex mt-2 text-xl text-gray-400">
-                      <p className=" text-black">{cagte.aurther}</p>
-                      <p className="font-bold ml-4">{cagte.date}</p>
+                      {category.heading}
+                    </Link>
+                    <div className="flex mt-2 text-xl text-gray-400 ">
+                      <p className=" text-black">{category.aurther}</p>
+                      <p className="font-bold ml-4">{category.date}</p>
                     </div>
-                    <p className="mt-5 text-xl">
-                      {getFirstTwoLines(cagte.detail.description)}...
+                    <p className="mt-[8%] text-xl ">
+                      {wordLength(category.detail.description)}.. .
                     </p>
                   </div>
                 </div>
-              );
-            }
-
-            return null;
-          })}
-        </div>
+                <hr className="m-[4%]" />
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
-
-      <div className="lg:w-[60%] w-full mx-auto lg:mt-3">
+      {/* Follwo upd is Hear  */}
+      {/* <div className="lg:w-[60%] w-full mx-auto lg:-mt-4  lg:flex-cols lg:justify-center"> */}
+      <div className="">
         <Follow />
         <RecentPost />
         <CategorysList />

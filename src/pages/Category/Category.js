@@ -18,9 +18,7 @@ const Category = () => {
   };
 
   return (
-    // <div className="p-4 flex flex-col justify-between w-full lg:flex-row   lg:-mt-12 ">
     <div className="md:flex md:justify-between mx-[5%] md:mt-2">
-      {/* <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]   lg:ml-[10%]  "> */}
       <div className="">
         {CATEGORYs.map((category, index) => {
           const categoryType = useCategoryName(category.category);
