@@ -8,8 +8,10 @@ import manali from "@/assets/Banner/manali.jpg";
 import ImgNext from "@/assets/next.svg";
 import ImgPrev from "@/assets/prev.svg";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router= useRouter()
   const slider = useRef();
 
   const previous = () => {
@@ -34,102 +36,89 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
-      <div className=" absolute z-10 lg:left-[9%] ml-8 right-0 left-0 overflow-hidden">
+    // <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
+    <div className="relative flex justify-between items-center">
+      <div className=" absolute z-10 py-[15%] px-[5%]">
         <button className="cursor-pointer p-2 bg-teal-900" onClick={previous}>
           <Image src={ImgPrev} alt="Travel" />
         </button>
       </div>
-      <div className="w-full lg:w-[85%] mt-[4%] lg:mt-[2%] p-3 ">
+      {/* <div className="w-full lg:w-[85%] mt-[4%] lg:mt-[2%] p-3 "> */}
+      <div className="w-full px-[5%] mt-2">
         <Slider {...settings} ref={slider} className="cursor-pointer">
           <div className="">
             <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
-              <div className="md:w-full md:mr-4 ">
-                <Image
-                  src={BannerPage}
-                  alt="banner"
-                  className=" w-full h-[60vh] rounded-lg xl:w-full"
-                />
-              </div>
+              <Image
+                src={BannerPage}
+                alt="banner"
+                className=" w-full h-[60vh] rounded-lg xl:w-full"
+              />
             </div>
-            <div className="absolute -mt-[1%] ml-10  flex justify-center items-start  ">
-              <div className="lg:-mt-[5%] -mt-[15%]">
-                <Link
-                  href={"category/travel-blogs"}
-                  className="bg-blue-600 text-2xl p-2 rounded-md text-white"
-                >
-                  Travel Blogs
-                </Link>
-                <div className="">
-                  <Link
-                    href={"/category/travel-blogs/1"}
-                    className="text-white mt-2  break-words md:text-3xl text-xl  "
-                  >
-                    5 Best Places to visit in Varanasi – <br /> The spiritual
-                    capital of India
-                  </Link>
-                </div>
-              </div>
+            <div className="absolute md:-mt-[1%] bottom-10 ml-11">
+              <button
+                onClick={() => router.push("/category/travel-blogs")}
+                className="bg-blue-500 text-white rounded hover:text-gray-400 cursor-pointer px-4 py-2"
+              >
+                Travel Blogs
+              </button>
+              <Link href={"/category/travel-blogs/1"}>
+                <p className="text-white text-2xl">
+                  5 Best Places to visit in Varanasi – The spiritual capital of
+                  India
+                </p>
+              </Link>
             </div>
           </div>
           <div className="">
-            <div className="flex justify-center items-center relative ">
+            <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
               <Image
                 src={Travel}
                 alt="banner"
-                className=" w-full h-[60vh] rounded-lg"
+                className=" w-full h-[60vh] rounded-lg xl:w-full"
               />
             </div>
-            <div className="absolute -mt-[1%] ml-5 ">
-              <div className="lg:-mt-[5%] -mt-[15%] ">
-                <Link
-                  href={"category/health-travel"}
-                  className="bg-blue-600 text-2xl p-2 rounded-md text-white"
-                >
-                  Health & Travel
-                </Link>{" "}
-                <br />
-                <Link
-                  href={"/category/health-travel/2"}
-                  className="text-white text-3xl mt-2 text-justify"
-                >
-                  8 Travel Tips for Introverts: Solo <br /> Travel at Your Own
-                  Pace
-                </Link>
-              </div>
+            <div className="absolute md:-mt-[1%] ml-5 bottom-10">
+              <button
+                onClick={() => router.push("/category/health-travel")}
+                className="bg-blue-500 text-white rounded hover:text-gray-400 cursor-pointer p-2"
+              >
+                Health & Travel
+              </button>
+              <Link href={"category/health-travel"}>
+                <p className="text-white text-2xl">
+                  8 Travel Tips for Introverts: Solo Travel at Your Own Pace
+                </p>
+              </Link>
             </div>
           </div>
+
           <div className="">
-            <div className="flex justify-center items-center  ">
+            <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
               <Image
                 src={manali}
                 alt="banner"
-                className=" w-full h-[60vh] rounded-lg"
+                className=" w-full h-[60vh] rounded-lg xl:w-full"
               />
             </div>
-            <div className="absolute -mt-[1%] ml-5 ">
-              <div className="-mt-[15%] lg:-mt-[5%] ">
-                <Link
-                  href={"category/travel-itinerary"}
-                  className="bg-blue-600  text-2xl p-2 rounded-md text-white"
-                >
-                  Travel Itinerary
-                </Link>{" "}
-                <br />
-                <Link
-                  href={"/category/travel-itinerary/3"}
-                  className="text-white -mt-2 text-3xl break-words  "
-                >
-                  Experiencing Manali: A 5-Day Travel Itinerary for <br />{" "}
-                  Adventure and Tranquility
-                </Link>
-              </div>
+            <div className="absolute md:-mt-[1%] ml-5 bottom-10">
+              <button
+                onClick={() => router.push("/category/travel-itinerary")}
+                className="bg-blue-500 text-white rounded hover:text-gray-400 cursor-pointer p-2"
+              >
+                Travel Itinerary
+              </button>
+              <Link href={"/category/travel-itinerary"}>
+                <p className="text-white text-2xl">
+                  Experiencing Manali: A 5-Day Travel Itinerary for Adventure{" "}
+                  <br /> and Tranquility
+                </p>
+              </Link>
             </div>
           </div>
         </Slider>
       </div>
-      <div className="p-2 bg-teal-900 z-10  lg:-ml-[2%] -ml-11 right-0  left-0">
-        <button className="cursor-pointer " onClick={next}>
+      <div className="absolute z-10 right-0 py-[15%] px-[5%]">
+        <button className="cursor-pointer bg-teal-900 p-2" onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
       </div>
