@@ -40,7 +40,7 @@ const Banner = () => {
           <Image src={ImgPrev} alt="Travel" />
         </button>
       </div>
-      <div className="w-full lg:w-[80%] mt-[4%] lg:mt-[2%] p-3 ">
+      <div className="w-full lg:w-[85%] mt-[4%] lg:mt-[2%] p-3 ">
         <Slider {...settings} ref={slider} className="cursor-pointer">
           <div className="">
             <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
@@ -52,7 +52,7 @@ const Banner = () => {
                 />
               </div>
             </div>
-            <div className="absolute -mt-[1%] ml-5  flex justify-center items-start  ">
+            <div className="absolute -mt-[1%] ml-10  flex justify-center items-start  ">
               <div className="lg:-mt-[5%] -mt-[15%]">
                 <Link
                   href={"category/travel-blogs"}

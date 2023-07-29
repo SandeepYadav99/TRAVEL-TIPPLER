@@ -1,6 +1,6 @@
+"use client";
 import CATEGORYs from "@/components/helper/CATEGORYs";
-import formatCategory from "@/components/hooks/ConvertSmall";
-import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -17,7 +17,7 @@ const RecentPost = () => {
 
   return (
     <div>
-      <div className="bg-white shadow-lg border-2 lg:mr-40 mt-4 m-[2%]">
+      <div className="bg-white shadow-lg border-2  mt-4 m-[2%]">
         <h1 className="text-2xl font-bold mt-2 ml-2">Recent Posts</h1>
         <hr className="m-[4%]" />
         {CATEGORYs.map((category, index) => {

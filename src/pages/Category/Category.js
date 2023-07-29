@@ -8,11 +8,8 @@ import Follow from "./Follow";
 import RecentPost from "./RecentPost";
 import CategorysList from "./CategorysList";
 import useCategoryName from "@/components/hooks/ConvertCaps";
-import Tags from "./Tags";
 
-const Category = ({ post_datas }) => {
-  console.log(post_datas)
-
+const Category = () => {
   const wordLength = (detail) => {
     if (detail) {
       const word = getFirstTwoLines(detail);
@@ -21,8 +18,10 @@ const Category = ({ post_datas }) => {
   };
 
   return (
-    <div className="p-4 flex flex-col justify-between w-full lg:flex-row   lg:-mt-12 ">
-      <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]   lg:ml-[10%]  ">
+    // <div className="p-4 flex flex-col justify-between w-full lg:flex-row   lg:-mt-12 ">
+    <div className="md:flex md:justify-between mx-[5%] md:mt-2">
+      {/* <div className="bg-white shadow-lg border-2 w-full lg:w-[90%]   lg:ml-[10%]  "> */}
+      <div className="">
         {CATEGORYs.map((category, index) => {
           const categoryType = useCategoryName(category.category);
           return (
@@ -66,11 +65,11 @@ const Category = ({ post_datas }) => {
         })}
       </div>
       {/* Follwo upd is Hear  */}
-      <div className="lg:w-[60%] w-full mx-auto lg:-mt-4">
+      {/* <div className="lg:w-[60%] w-full mx-auto lg:-mt-4  lg:flex-cols lg:justify-center"> */}
+      <div className="">
         <Follow />
         <RecentPost />
         <CategorysList />
-        <Tags />
       </div>
     </div>
   );

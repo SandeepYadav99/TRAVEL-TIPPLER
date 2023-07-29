@@ -3,7 +3,6 @@ import CATEGORYs from "@/components/helper/CATEGORYs";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import React from "react";
-import ConvertCaps from "@/components/hooks/ConvertCaps";
 import Link from "next/link";
 
 const CategoryTypes = () => {
