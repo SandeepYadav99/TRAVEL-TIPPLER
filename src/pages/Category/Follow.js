@@ -15,13 +15,13 @@ const Follow = () => {
           <span className="text-[#1da1f2] text-xl font-sans ml-3">Twitter</span>
         </li>
         <li className="flex justify-center items-center m-3 cursor-pointer transition-transform transform hover:scale-110">
-          <Image src={Instagram} height={40} width={40} className="" />
+          <Image src={Instagram} height={40} width={40} className="" alt="Travel Tiper"/>
           <span className="text-[#f00075] text-xl font-sans ml-3">
             Instagram
           </span>
         </li>
         <li className="flex justify-center items-center m-3 cursor-pointer transition-transform transform hover:scale-110">
-          <Image src={Facebook} height={40} width={40} className="" />
+          <Image src={Facebook} height={40} width={40} className="" alt="Travel Tiper"/>
           <span className="text-[#1778f2] text-xl font-sans ml-3">
             Facebook
           </span>
@@ -30,17 +30,17 @@ const Follow = () => {
         {/* New list  */}
 
         <li className="flex justify-center items-center m-3 cursor-pointer transition-transform transform hover:scale-110">
-          <Image src={Twitter} height={50} width={50} className="" />
+          <Image src={Twitter} height={50} width={50} className="" alt="Travel Tiper"/>
           <span className="text-[#1da1f2] text-xl font-sans ml-3">Twitter</span>
         </li>
         <li className="flex justify-center items-center m-3 cursor-pointer transition-transform transform hover:scale-110">
-          <Image src={Instagram} height={40} width={40} className="" />
+          <Image src={Instagram} height={40} width={40} className="" alt="Trave Tiper"/>
           <span className="text-[#f00075] text-xl font-sans ml-3">
             Instagram
           </span>
         </li>
         <li className="flex justify-center items-center m-3 cursor-pointer transition-transform transform hover:scale-110">
-          <Image src={Facebook} height={40} width={40} className="" />
+          <Image src={Facebook} height={40} width={40} className="" alt="Travel Tiper "/>
           <span className="text-[#1778f2] text-xl font-sans ml-3">
             Facebook
           </span>
