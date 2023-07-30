@@ -3,7 +3,7 @@
 import React from "react";
 import { useParams, useRouter } from "next/navigation";
 import CATEGORYs from "@/components/helper/CATEGORYs";
-import Follow from "@/pages/Category/Follow";
+import Follow from "@/pages/Category/Social_Links";
 import RecentPost from "@/pages/Category/RecentPost";
 import CategorysList from "@/pages/Category/CategorysList";
 
@@ -15,7 +15,6 @@ export const metadata = {
 };
 
 const Itinerary = () => {
-
   return (
     <div className="md:flex md:justify-between mx-[5%] md:mt-2">
       <div className="">
@@ -24,9 +23,7 @@ const Itinerary = () => {
         </div>
         {CATEGORYs.map((category, index) => {
           if (category.category === "Travel Itinerary") {
-            return (
-             <Category_Post category={category} key={index}/>
-            );
+            return <Category_Post category={category} key={index} />;
           }
           return null;
         })}
