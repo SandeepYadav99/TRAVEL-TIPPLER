@@ -6,7 +6,6 @@ import React from "react";
 import Follow from "./Social_Links";
 import RecentPost from "./RecentPost";
 import CategorysList from "./CategorysList";
-
 import Category_Post from "./Category_Post";
 
 const Category = () => {

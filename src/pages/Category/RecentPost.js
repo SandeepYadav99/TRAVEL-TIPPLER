@@ -9,7 +9,6 @@ const RecentPost = () => {
   const router = useRouter();
 
   const categoryHandler = (category) => {
-    //  const formater = formatCategory()
     const converted = category.category.toLowerCase().replace(/ /g, "-");
 
     router.push(`/category/${converted}/${category.id}`);
@@ -23,11 +22,11 @@ const RecentPost = () => {
         {CATEGORYs.map((category, index) => {
           return (
             <div key={category.id}>
-              <div className="flex justify-around   m-4 ">
-                <div className="relative m-3 cursor-pointer">
+              <div className="flex justify-around  m-4 ">
+                <div className=" m-3 cursor-pointer">
                   <Image
                     src={category.image}
-                    className="rounded-md float-left"
+                    className="rounded-md "
                     alt="Travel"
                     width={300}
                     height={300}
@@ -41,7 +40,7 @@ const RecentPost = () => {
                     {category.heading}
                   </a>
                   <div className=" mt-2  text-gray-400">
-                    <p className="font-bold ml-4 clear-right">{category.date}</p>
+                    <p className="font-bold ml-4 ">{category.date}</p>
                   </div>
                 </div>
               </div>

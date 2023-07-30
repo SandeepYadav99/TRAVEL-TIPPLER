@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
 import useCategoryName from "@/components/hooks/ConvertCaps";
+import { useRouter } from "next/navigation";
 
 const Category_Post = ({ category , catageryId}) => {
+  const router = useRouter();
 
   const categoryType = useCategoryName(category?.category);
   const wordLength = (detail) => {
@@ -15,6 +17,9 @@ const Category_Post = ({ category , catageryId}) => {
     }
   };
 
+  const headingHandler = (id) => {
+    router.push(`/category/${categoryType}/${id}`)
+  }
   return (
     <div key={catageryId}>
       <div className="flex justify-between   m-4 ">
@@ -34,12 +39,12 @@ const Category_Post = ({ category , catageryId}) => {
           </Link>
         </div>
         <div className="ml-2 mt-2 ">
-          <Link
-            href={`/category/${categoryType}/${category?.id}`}
+          <a
+           onClick={()=>headingHandler(category.id)}
             className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer"
           >
             {category?.heading}
-          </Link>
+          </a>
           <div className="flex mt-2 text-xl text-gray-400 ">
             <p className=" text-black">{category?.aurther}</p>
             <p className="font-bold ml-4">{category?.date}</p>
