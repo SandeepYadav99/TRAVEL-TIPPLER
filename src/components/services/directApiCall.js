@@ -1,1 +1,6 @@
-export default {};
+
+const directApiCall = {
+ 
+};
+
+export default directApiCall;

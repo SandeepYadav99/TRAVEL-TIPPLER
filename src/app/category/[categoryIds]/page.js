@@ -1,29 +1,18 @@
 "use client";
 import React from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import CATEGORYs from "@/components/helper/CATEGORYs";
-
-import Image from "next/image";
-import Link from "next/link";
-import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
 import formatCategory from "@/components/hooks/ConvertSmall";
-import useCategoryName from "@/components/hooks/ConvertCaps";
 import Follow from "@/pages/Category/Follow";
 import RecentPost from "@/pages/Category/RecentPost";
 import CategorysList from "@/pages/Category/CategorysList";
+import Category_Post from "@/pages/Category/Category_Post";
 
 const CategoryIds = () => {
   const params = useParams();
-  const router = useRouter();
   const paramsList = formatCategory(params.categoryIds);
 
-  const wordLength = (detail) => {
-    if (detail) {
-      const word = getFirstTwoLines(detail);
-      return word;
-    }
-  };
-
+ 
   return (
     <div className="md:flex md:justify-between mx-[5%] md:mt-2">
       <div className="">
@@ -31,54 +20,15 @@ const CategoryIds = () => {
           <h1 className="text-2xl font-bold ml-[2%]">{paramsList}</h1>
         </div>
         <hr className="m-6" />
-
         {CATEGORYs.map((category, index) => {
-          const categoryType = useCategoryName(category.category);
           if (category.category === paramsList) {
             return (
-              <div key={category.id}>
-                <div className="flex justify-between   m-4 ">
-                  <div className="relative m-3 cursor-pointer ">
-                    <Image
-                      src={category.image}
-                      className="rounded-md "
-                      alt="Travel"
-                      width={600}
-                      height={600}
-                    />
-                    <Link
-                      href={`category/${categoryType}`}
-                      className="th:block hidden  absolute z-10 text-xl text-bold text-left top-0 bg-neutral-500  hover:bg-blue-500 hover:text-black p-2 text-white rounded-md"
-                    >
-                      {category.category}
-                    </Link>
-                  </div>
-                  <div className="ml-2 mt-2 ">
-                    <Link
-                      href={`/category/${categoryType}/${category.id}`}
-                      // onClick={() => categoryHandler(category)}
-                      className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer"
-                    >
-                      {category.heading}
-                    </Link>
-                    <div className="flex mt-2 text-xl text-gray-400 ">
-                      <p className=" text-black">{category.aurther}</p>
-                      <p className="font-bold ml-4">{category.date}</p>
-                    </div>
-                    <p className="mt-[8%] text-xl ">
-                      {wordLength(category.detail.description)}.. .
-                    </p>
-                  </div>
-                </div>
-                <hr className="m-[4%]" />
-              </div>
+             <Category_Post category={category ?? " "} key={category.id}/>
             );
           }
           return null;
         })}
       </div>
-      {/* Follwo upd is Hear  */}
-      {/* <div className="lg:w-[60%] w-full mx-auto lg:-mt-4  lg:flex-cols lg:justify-center"> */}
       <div className="">
         <Follow />
         <RecentPost />

@@ -8,8 +8,7 @@ export const metadata = {
 };
 
 const Home =  () => {
-  // const post_data = await fetchPostData();
-  
+
   return (
     <div>
       <Banner />
@@ -19,11 +18,3 @@ const Home =  () => {
 };
 
 export default Home;
-
-// export const fetchPostData = async () => {
-//   const respons_data = await fetch(
-//     "https://www.traveltippler.com/wp-json/wp/v2/posts"
-//   );
-//   const data = await respons_data.json();
-//   return data;
-// }

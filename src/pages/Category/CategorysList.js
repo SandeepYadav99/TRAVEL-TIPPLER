@@ -1,5 +1,5 @@
+"use client";
 import CATEGORYs from "@/components/helper/CATEGORYs";
-import formatCategory from "@/components/hooks/ConvertSmall";
 import Link from "next/link";
 import React from "react";
 
