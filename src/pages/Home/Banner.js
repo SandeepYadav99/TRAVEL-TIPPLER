@@ -45,7 +45,7 @@ const Banner = () => {
       </div>
       {/* <div className="w-full lg:w-[85%] mt-[4%] lg:mt-[2%] p-3 "> */}
       <div className="w-full px-[5%] mt-2">
-        <Slider {...settings} ref={slider} className="cursor-pointer">
+        <Slider {...settings} ref={slider} className="">
           <div className="">
             <div className="flex flex-col justify-center items-center  md:flex-row md:items-start">
               <Image
@@ -57,7 +57,7 @@ const Banner = () => {
             <div className="absolute md:-mt-[1%] bottom-10 ml-11">
               <button
                 onClick={() => router.push("/category/travel-blogs")}
-                className="bg-blue-500 text-white rounded hover:bg-gray-400 hover:text-white cursor-pointer px-4 py-2"
+                className="bg-blue-500 text-white rounded hover:bg-gray-400 hover:text-white cursor-pointer p-2"
               >
                 Travel Blogs
               </button>
