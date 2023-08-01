@@ -40,11 +40,11 @@ const Category_Post = ({ category, catageryId }) => {
           </Link>
           <a
             onClick={() => headingHandler(category.id)}
-            className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer"
+            className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer text-clip overflow-hidden"
           >
             {category?.heading}
           </a>
-          <div className="flex mt-2 text-xl text-gray-400 p-2 ">
+          <div className="flex mt-2 text-xl text-gray-400 p-2 truncate">
             <p className=" text-black ">{category?.aurther}</p>
             <p className="font-bold ml-4">{category?.date}</p>
           </div>
