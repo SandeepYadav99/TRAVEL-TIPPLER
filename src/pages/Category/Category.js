@@ -11,7 +11,7 @@ import Category_Post from "./Category_Post";
 const Category = ({ categoryData }) => {
  
   return (
-    <div className="lg:flex lg:justify-between mx-[5%] md:mt-2  ">
+    <div className="md:flex md:justify-between mx-[5%] md:mt-2  ">
       <div className="shadow-lg">
         {CATEGORYs.map((category, index) => {
           return <Category_Post category={category} key={index} />;
