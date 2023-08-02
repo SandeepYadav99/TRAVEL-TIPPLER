@@ -8,10 +8,11 @@ import RecentPost from "./RecentPost";
 import CategorysList from "./CategorysList";
 import Category_Post from "./Category_Post";
 
-const Category = ({ categoryData }) => {
+const Category = () => {
+ 
  
   return (
-    <div className="md:flex md:justify-between mx-[5%] md:mt-2  ">
+    <div className="lg:flex lg:justify-between mx-[5%] md:mt-2  ">
       <div className="shadow-lg">
         {CATEGORYs.map((category, index) => {
           return <Category_Post category={category} key={index} />;

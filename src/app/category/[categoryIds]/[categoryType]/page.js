@@ -7,7 +7,6 @@ import Link from "next/link";
 
 const CategoryTypes = () => {
   const params = useParams();
-  const router = useRouter();
 
   return (
     <div className="bg-white shadow-lg  w-full mt-8 h-full mx-auto lg:w-[80%]">

@@ -20,7 +20,6 @@ const Category_Post = ({ category, catageryId }) => {
   const headingHandler = (id) => {
     router.push(`/category/${categoryType}/${id}`);
   };
-
   return (
     <div key={catageryId} className="">
       <div className="p-5 ">
@@ -40,17 +39,17 @@ const Category_Post = ({ category, catageryId }) => {
           </Link>
           <a
             onClick={() => headingHandler(category.id)}
-            className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer text-clip overflow-hidden"
+            className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer"
           >
             {category?.heading}
           </a>
-          <div className="flex mt-2 text-xl text-gray-400 p-2 truncate">
+          <div className="flex mt-2 text-xl text-gray-400 p-2">
             <p className=" text-black ">{category?.aurther}</p>
             <p className="font-bold ml-4">{category?.date}</p>
           </div>
         </div>
 
-        <p className=" text-xl start-0 text-start text-clip overflow-hidden">
+        <p className=" text-xl start-0 text-start">
           {wordLength(category?.detail.description)}.. .
         </p>
       </div>
