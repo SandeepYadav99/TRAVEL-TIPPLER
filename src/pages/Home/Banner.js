@@ -38,7 +38,7 @@ const Banner = () => {
   return (
     // <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
     <div className=" flex justify-between items-center">
-      <div className=" absolute z-10 p-[5%]">
+      <div className=" absolute z-10 p-[5%] ">
         <button className="cursor-pointer p-2 bg-teal-900" onClick={previous}>
           <Image src={ImgPrev} alt="Travel" />
         </button>
@@ -54,7 +54,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/travel-blogs")}
-              className="bg-blue-500 absolute bottom-16 ml-4  text-bold text-white p-2 hover:bg-stone-300 cursor-pointer hover:text-black font-2xl rounded"
+              className="bg-blue-500 absolute bottom-16 ml-4  text-bold text-white p-1 hover:bg-stone-600 hover:text-white cursor-pointer  font-2xl rounded"
             >
               Travel Blogs
             </a>
@@ -74,7 +74,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/health-travel")}
-              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white p-2 hover:bg-stone-300 cursor-pointer hover:text-black font-2xl rounded"
+              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white p-1 hover:bg-stone-600 hover:text-white cursor-pointer  font-2xl rounded"
             >
               Health & Travel
             </a>
@@ -93,7 +93,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/travel-itinerary")}
-              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white p-2 hover:bg-stone-300 cursor-pointer hover:text-black font-2xl rounded"
+              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white p-1 hover:bg-stone-600 hover:text-white cursor-pointer font-2xl rounded"
             >
               Travel Itinerary
             </a>

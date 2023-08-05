@@ -28,29 +28,34 @@ const Category_Post = ({ category, catageryId }) => {
             src={category?.image}
             className="rounded-md mr-11 float-left th:w-[300px] th:h-[200px]"
             alt="Travel"
-            width={150}
+            width={210}
             height={150}
           />
           <Link
             href={`/category/${categoryType}`}
-            className="th:block hidden float-left absolute z-10 text-xl m-2 text-bold text-left top-0 bg-neutral-500 hover:bg-blue-500  text-white  p-1"
+            className="th:block hidden float-left absolute z-10 text-md m-2 text-bold text-left top-0 bg-[#777] hover:bg-[#686363]  text-white p-1 rounded-sm"
           >
             {category?.category}
           </Link>
-          <a
-            onClick={() => headingHandler(category.id)}
-            className="text-2xl font-bold mt-4 hover:text-blue-600 cursor-pointer"
-          >
-            {category?.heading}
-          </a>
-          <div className="flex mt-2 text-xl text-gray-400 p-2">
-            <p className=" text-black ">{category?.aurther}</p>
-            <p className="font-bold ml-4">{category?.date}</p>
+          <div className="flex flex-col ">
+            <a
+              onClick={() => headingHandler(category.id)}
+              className="text-2xl font-bold  hover:text-blue-600 cursor-pointer"
+            >
+              {category?.heading}
+            </a>
+
+            <div className=" text-gray-400  flex">
+              <p className=" text-black font-medium text-md">
+                {category?.aurther}
+              </p>
+              <strong className="text-gray-400 ml-3">{category?.date}</strong>
+            </div>
           </div>
         </div>
 
-        <p className=" text-xl start-0 text-start">
-          {wordLength(category?.detail.description)}.. .
+        <p className=" text-xl start-0 text-start  line-clamp-2 ">
+          {wordLength(category?.detail.description)}
         </p>
       </div>
       <hr className="m-[4%]" />

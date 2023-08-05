@@ -12,13 +12,13 @@ const Category = () => {
  
  
   return (
-    <div className="lg:flex lg:justify-between mx-[5%] md:mt-2  ">
-      <div className="shadow-lg">
+    <div className="md:flex md:justify-between  md:mt-2  mx-[5%]">
+      <div className="shadow-lg w-min-[960px] w-max-[1179px]">
         {CATEGORYs.map((category, index) => {
           return <Category_Post category={category} key={index} />;
         })}
       </div>
-      <div className="">
+      <div className="md:w-max-[30vw] md:w-[40vw]">
         <Follow />
         <RecentPost />
         <CategorysList />

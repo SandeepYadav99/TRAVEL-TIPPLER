@@ -56,23 +56,22 @@ const RecentPost = () => {
       <hr className="m-[4%]" />
       {CATEGORYs.map((category, index) => {
         return (
-          <div key={category.id}>
+          <div key={category.id} className="md:w-[30vw]">
             <div className="p-4">
-              <div className="">
-                <Image
-                  src={category.image}
-                  height={150}
-                  width={150}
-                  alt=""
-                  className="mr-4 rounded-md float-left  cursor-pointer"
-                />
-                <a
-                  onClick={() => categoryHandler(category)}
-                  className="clear-left text-xl font-bold overflow-hidden text-justify cursor-pointer"
-                >
-                  {category.heading}
-                </a>
-              </div>
+              <Image
+                src={category.image}
+                height={150}
+                width={150}
+                alt=""
+                className="mr-4 rounded-md float-left  cursor-pointer"
+              />
+              <a
+                onClick={() => categoryHandler(category)}
+                className=" text-xl font-bold  text-justify cursor-pointer text-ellipsis"
+              >
+                {category.heading}
+              </a>
+
               <p className="text-xl font-lightbold">{category.date}</p>
             </div>
             <hr className="m-[6%] border-gray-300 border-3" />
