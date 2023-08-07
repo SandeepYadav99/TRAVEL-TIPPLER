@@ -11,7 +11,7 @@ const Home =  async() => {
   const categoryData = await fetchCategory();
 
   return (
-    <div>
+    <div className="">
       <Banner />
       <Category categoryData={categoryData} />
     </div>

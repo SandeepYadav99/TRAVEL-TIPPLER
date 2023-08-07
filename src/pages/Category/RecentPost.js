@@ -51,7 +51,7 @@ const RecentPost = () => {
     //   </div>
     // </div>
 
-    <div className="bg-white shadow-lg border-2  mt-4 m-[2%] ">
+    <div className="bg-white shadow-lg border-2  mt-4 mx-[2%] ">
       <h1 className="text-2xl font-bold mt-2 ml-2">Recent Posts</h1>
       <hr className="m-[4%]" />
       {CATEGORYs.map((category, index) => {
@@ -72,7 +72,7 @@ const RecentPost = () => {
                 {category.heading}
               </a>
 
-              <p className="text-xl font-lightbold">{category.date}</p>
+              <p className="text-xl font-lightbold ">{category.date}</p>
             </div>
             <hr className="m-[6%] border-gray-300 border-3" />
           </div>

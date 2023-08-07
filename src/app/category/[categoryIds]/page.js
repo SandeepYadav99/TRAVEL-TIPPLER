@@ -13,7 +13,7 @@ const CategoryIds = () => {
   const paramsList = formatCategory(params.categoryIds);
 
   return (
-    <div className="md:flex md:justify-between mx-[5%] md:mt-2">
+    <div className="md:flex md:justify-between mx-[5%] md:mt-2 ">
       <div className="">
         <div className="mt-4">
           <h1 className="text-2xl font-bold ml-[2%]">{paramsList}</h1>

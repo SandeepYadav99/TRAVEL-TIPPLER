@@ -6,10 +6,11 @@ import Facebook from "@/assets/facbook.svg";
 
 const SocialLinks = () => {
   return (
-    <div className="shadow-md border-2  m-4  ">
+    <div className="shadow-md border-2  mx-[2%] mt-[1%] ">
       <h1 className="text-2xl font-bold ml-4 mt-2">Follow Us</h1>
       <hr className="m-4" />
-      <div className="flex justify-between items-center flex-wrap lg:grid md:grid-cols-2 m-[2%] md:w-[30vw]">
+      {/* lg:grid md:grid-cols-2 m-[2%] md:w-[30vw] */}
+      <div className="flex justify-between items-center flex-wrap ">
         <li className="flex justify-center m-3 items-center cursor-pointer transition-transform transform hover:scale-110">
           <Image
             src={Twitter}
