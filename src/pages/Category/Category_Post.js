@@ -21,7 +21,7 @@ const Category_Post = ({ category, catageryId }) => {
     router.push(`/category/${categoryType}/${id}`);
   };
   return (
-    <div key={catageryId} className="shadow-md">
+    <div key={catageryId} className="">
       <div className="p-5 ">
         {/* th:w-[300px] th:h-[200px] */}
         <div className="relative m-3 cursor-pointer ">
