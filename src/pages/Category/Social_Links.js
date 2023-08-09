@@ -6,7 +6,7 @@ import Facebook from "@/assets/facbook.svg";
 
 const SocialLinks = () => {
   return (
-    <div className="shadow-md border-2  mx-[2%] mt-[1%] ">
+    <div className="shadow-sm   mx-[2%] mt-[1%] ">
       <h1 className="text-2xl font-bold ml-4 mt-2">Follow Us</h1>
       <hr className="m-4" />
       {/* lg:grid md:grid-cols-2 m-[2%] md:w-[30vw] */}

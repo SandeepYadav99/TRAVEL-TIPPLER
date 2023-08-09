@@ -22,11 +22,11 @@ const Category_Post = ({ category, catageryId }) => {
   };
   return (
     <div key={catageryId} className="">
-      <div className="p-5 ">
+      <div className="p-5 w-full">
         <div className="relative m-3 cursor-pointer ">
           <Image
             src={category?.image}
-            className="rounded-md mr-11 float-left sm:w-[330px] sm:h-[220px] mb-4"
+            className="rounded-md mr-5 float-left sm:w-[330px] sm:h-[220px] mb-4"
             alt="Travel"
             width={180}
             height={80}
@@ -45,7 +45,7 @@ const Category_Post = ({ category, catageryId }) => {
               {category?.heading}
             </a>
 
-            <div className=" text-gray-400  flex">
+            <div className=" text-gray-400  flex w-full ">
               <p className=" text-black font-medium text-lg">
                 {category?.aurther}
               </p>
@@ -54,7 +54,7 @@ const Category_Post = ({ category, catageryId }) => {
           </div>
         </div>
 
-        <p className=" text-xl float-left  text-justify  line-clamp-2 mr-11 mt-4 sm:float-none sm:mr-0 ">
+        <p className=" text-xl float-left  text-justify  line-clamp-2 mr-11 mt-4 sm:float-none sm:mr-0 whitespace-normal hidden mo:block">
           {wordLength(category?.detail.description)}
         </p>
       </div>

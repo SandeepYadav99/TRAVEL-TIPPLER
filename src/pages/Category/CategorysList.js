@@ -13,7 +13,7 @@ const CategorysList = () => {
   }, {});
 
   return (
-    <div className="bg-white shadow-lg border-2 mt-4 m-[2%] ">
+    <div className="bg-white shadow-sm  mt-4 m-[2%] ">
       <h1 className="text-2xl  font-black ml-4 my-4">Category</h1>
       <hr className="mx-8" />
       {Object.entries(categoryCounts).map(([category, count]) => {
@@ -23,11 +23,11 @@ const CategorysList = () => {
             <div className="flex justify-between mx-8 p-3 hover:text-blue-500">
               <Link
                 href={`/category/${convertedCategory}`}
-                className="text-2xl courser-pointer "
+                className="text-md courser-pointer "
               >
                 {category}
               </Link>
-              <p className="border-2 rounded-md px-2 text-center">{count}</p>
+              <p className="border-2 rounded-md h-8 w-8 text-center">{count}</p>
             </div>
             <hr className="mx-8" />
           </div>

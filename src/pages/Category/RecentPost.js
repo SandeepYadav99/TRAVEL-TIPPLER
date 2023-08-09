@@ -15,66 +15,32 @@ const RecentPost = () => {
   };
 
   return (
-    // <div>
-    //   <div className="bg-white shadow-lg border-2  mt-4 m-[2%]">
-    //     <h1 className="text-2xl font-bold mt-2 ml-2">Recent Posts</h1>
-    //     <hr className="m-[4%]" />
-    //     {CATEGORYs.map((category, index) => {
-    //       return (
-    //         <div key={category.id}>
-    //           <div className="flex justify-around  m-4 ">
-    //             <div className=" m-3 cursor-pointer">
-    //               <Image
-    //                 src={category.image}
-    //                 className="rounded-md "
-    //                 alt="Travel"
-    //                 width={300}
-    //                 height={300}
-    //               />
-    //             </div>
-    //             <div className="ml-4">
-    //               <a
-    //                 onClick={() => categoryHandler(category)}
-    //                 className="text-md font-bold  hover:text-blue-600 cursor-pointer"
-    //               >
-    //                 {category.heading}
-    //               </a>
-    //               <div className=" mt-2  text-gray-400">
-    //                 <p className="font-bold ml-4 ">{category.date}</p>
-    //               </div>
-    //             </div>
-    //           </div>
-    //           <hr className="m-[4%]" />
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
-    // </div>
-
-    <div className="bg-white shadow-lg border-2  mt-4 mx-[2%] ">
+    <div className="bg-white shadow-sm   mt-4 mx-[2%] ">
       <h1 className="text-2xl font-bold mt-2 ml-2">Recent Posts</h1>
       <hr className="m-[4%]" />
       {CATEGORYs.map((category, index) => {
         return (
           <div key={category.id} className="md:w-[30vw]">
-            <div className="p-4">
+            <div className="p-4 ">
               <Image
                 src={category.image}
                 height={150}
                 width={150}
                 alt=""
-                className="mr-4 rounded-md float-left  cursor-pointer"
+                className="mr-4 rounded-md float-left cursor-pointer"
               />
-              <a
-                onClick={() => categoryHandler(category)}
-                className=" text-xl font-bold  text-justify cursor-pointer text-ellipsis"
-              >
-                {category.heading}
-              </a>
+           
+                <a
+                  onClick={() => categoryHandler(category)}
+                  className="text-lg  text-justify cursor-pointer text-ellipsis truncate  line-clamp-3 whitespace-normal  hover:text-blue-400"
+                >
+                  {category.heading}
+                </a>
 
-              <p className="text-xl font-lightbold ">{category.date}</p>
+                <p className="text-sm font-light text-gray-600  ">{category.date}</p>
+           
             </div>
-            <hr className="m-[6%] border-gray-300 border-3" />
+            <hr className="m-[3%] " />
           </div>
         );
       })}
