@@ -23,7 +23,6 @@ const Category_Post = ({ category, catageryId }) => {
   return (
     <div key={catageryId} className="">
       <div className="p-5 ">
-        {/* th:w-[300px] th:h-[200px] */}
         <div className="relative m-3 cursor-pointer ">
           <Image
             src={category?.image}
