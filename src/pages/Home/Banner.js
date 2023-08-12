@@ -42,7 +42,7 @@ const Banner = () => {
       <div className=" absolute z-10  ">
         {/*  */}
         <button
-          className="cursor-pointer  hover:bg-[#32323280] "
+          className="cursor-pointer  hover:bg-gray-500 p-2 rounded-sm "
           onClick={previous}
         >
           <Image src={ImgPrev} alt="Travel" />
@@ -111,8 +111,8 @@ const Banner = () => {
           </div>
         </Slider>
       </div>
-      <div className="absolute z-10 right-0 p-[5%]">
-        <button className="cursor-pointer hover:bg-[#32323280]" onClick={next}>
+      <div className="absolute z-10 right-0 p-[5%]  ">
+        <button className="cursor-pointer hover:bg-gray-500 p-2 rounded-sm" onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
       </div>

@@ -44,7 +44,7 @@ const Header = () => {
       <div>
         <div className="lg:flex items-center justify-center hidden">
           <input
-            className="border-2 p-3 rounded-md"
+            className="border-2 p-3 rounded-md "
             type="search"
             placeholder="Search "
             aria-label="Search"
