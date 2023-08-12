@@ -37,12 +37,12 @@ const Banner = () => {
 
   return (
     // <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
-    <div className=" flex justify-between items-center mx-[2%] overflow-hidden">
+    <div className=" flex justify-between items-center mx-[4%] overflow-hidden ">
       {/*  */}
-      <div className=" absolute z-10  p-[5%]">
-        {/* py-8 px-4 */}
+      <div className=" absolute z-10  ">
+        {/*  */}
         <button
-          className="cursor-pointer   hover:bg-teal-700 "
+          className="cursor-pointer  hover:bg-[#32323280] "
           onClick={previous}
         >
           <Image src={ImgPrev} alt="Travel" />
@@ -112,8 +112,7 @@ const Banner = () => {
         </Slider>
       </div>
       <div className="absolute z-10 right-0 p-[5%]">
-        {/* py-8 px-4  */}
-        <button className="cursor-pointer   hover:bg-teal-700" onClick={next}>
+        <button className="cursor-pointer hover:bg-[#32323280]" onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
       </div>
