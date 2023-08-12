@@ -9,30 +9,30 @@ const Footer = () => {
   return (
     <footer className=" left-0 right-0 w-full bg-black  ">
       <div className="">
-        <ul className="text-white flex justify-around flex-wrap list-disc">
+        <ul className="text-white flex justify-around flex-wrap list-disc ">
           <div className="mt-8">
-            <li className="p-2 font-sans text-xl">Delhi to Shimla Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Rishikesh Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Kasol Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Chandigarh Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Dehradun Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Manali Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Shimla Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Rishikesh Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Kasol Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Chandigarh Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Dehradun Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Manali Bus</li>
           </div>
           <div className="mt-8">
-            <li className="p-2 font-sans text-xl">Jamnagar to Rajkot Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Lucknow Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Varanasi Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Jaipur Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Dharamshala Bus</li>
-            <li className="p-2 font-sans text-xl">Ahmedabad to Pune Bus</li>
+            <li className="p-2 font-sans text-[17px]">Jamnagar to Rajkot Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Lucknow Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Varanasi Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Jaipur Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Dharamshala Bus</li>
+            <li className="p-2 font-sans text-[17px]">Ahmedabad to Pune Bus</li>
           </div>
           <div className="mt-8">
-            <li className="p-2 font-sans text-xl">Mumbai to Goa Bus</li>
-            <li className="p-2 font-sans text-xl">Bhopal to Indore Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Jammu Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Udaipur Bus</li>
-            <li className="p-2 font-sans text-xl">Ahmedabad to Mumbai Bus</li>
-            <li className="p-2 font-sans text-xl">Delhi to Katra Bus</li>
+            <li className="p-2 font-sans text-[17px]">Mumbai to Goa Bus</li>
+            <li className="p-2 font-sans text-[17px]">Bhopal to Indore Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Jammu Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Udaipur Bus</li>
+            <li className="p-2 font-sans text-[17px]">Ahmedabad to Mumbai Bus</li>
+            <li className="p-2 font-sans text-[17px]">Delhi to Katra Bus</li>
           </div>
         </ul>
       </div>
@@ -40,31 +40,31 @@ const Footer = () => {
       <ul className="text-white flex justify-center">
         <Link
           href={"https://www.zingbus.com/distance"}
-          className="p-2 font-sans text-lg"
+          className="p-2 font-sans text-[13px]"
         >
           DISTANCE CALCULATOR
         </Link>
         <Link
           href={"https://www.zingbus.com/blog/"}
-          className="p-2 font-sans text-lg"
+          className="p-2 font-sans text-[13px]"
         >
           ZINGBUS BLOG
         </Link>
         <Link
           href={"https://www.zingbus.com/blog/zing-electric-shared-cab/"}
-          className="p-2 font-sans text-lg"
+          className="p-2 font-sans text-[13px]"
         >
           ZING ELECTRIC
         </Link>
         <Link
           href={"https://www.zingbus.com/"}
-          className="p-2 font-sans text-lg"
+          className="p-2 font-sans text-[13px]"
         >
           BUS TICKET BOOKING
         </Link>
       </ul>
-      <div className="text-white text-center text-xl">
-        <p>© 2023 All Rights Reserved TravelTippler</p>
+      <div className="text-white text-center ">
+        <p className="text-[17px]">© 2023 All Rights Reserved TravelTippler</p>
       </div>
       <ul className="flex justify-center mt-2">
         <a>

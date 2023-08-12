@@ -59,7 +59,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/travel-blogs")}
-              className="bg-blue-500 absolute bottom-16 ml-4  text-bold text-white p-1 hover:bg-stone-600 hover:text-white cursor-pointer  font-2xl rounded"
+              className= " bg-blue-500 absolute bottom-16 ml-4 font-normal text-white  hover:bg-[#0000004d] cursor-pointer  font-lg rounded"
             >
               Travel Blogs
             </a>
@@ -79,7 +79,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/health-travel")}
-              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white p-1 hover:bg-stone-600 hover:text-white cursor-pointer  font-2xl rounded"
+              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white hover:bg-[#0000004D]  cursor-pointer  font-lg rounded"
             >
               Health & Travel
             </a>
@@ -98,7 +98,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/travel-itinerary")}
-              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white p-1 hover:bg-stone-600 hover:text-white cursor-pointer font-2xl rounded"
+              className="bg-blue-500 absolute bottom-16 ml-8  text-bold text-white hover:bg-[#0000004D]  cursor-pointer font-lg rounded"
             >
               Travel Itinerary
             </a>

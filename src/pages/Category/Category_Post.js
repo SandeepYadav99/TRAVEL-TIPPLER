@@ -26,14 +26,14 @@ const Category_Post = ({ category, catageryId }) => {
         <div className="relative m-3 cursor-pointer ">
           <Image
             src={category?.image}
-            className="rounded-md mr-5 float-left sm:w-[330px] sm:h-[220px] mb-4"
+            className="rounded-md mr-5 float-left sm:w-[330px] sm:h-[220px] mb-4 mo:w-[150px] mo:h-[120px] "
             alt="Travel"
-            width={180}
+            width={80}
             height={80}
           />
           <Link
             href={`/category/${categoryType}`}
-            className="sm:block hidden float-left absolute z-10 text-md m-2 text-bold text-left top-0 bg-[#777] hover:bg-[#686363]  text-white p-1 rounded-sm"
+            className="sm:block hidden float-left absolute z-10 text-sm m-2 text-bold text-left top-0 font-serif bg-[#0000004D]  text-white px-[6px] rounded-sm"
           >
             {category?.category}
           </Link>
@@ -46,15 +46,15 @@ const Category_Post = ({ category, catageryId }) => {
             </a>
 
             <div className=" text-gray-400  flex w-full ">
-              <p className=" text-black font-medium text-lg">
+              <p className=" text-black font-medium text-md font-serif ">
                 {category?.aurther}
               </p>
-              <strong className="text-gray-400 ml-3">{category?.date}</strong>
+              <strong className="text-gray-[#999999] ml-3 text-sm">{category?.date}</strong>
             </div>
           </div>
         </div>
 
-        <p className=" text-xl float-left  text-justify  line-clamp-2 mr-11 mt-4 sm:float-none sm:mr-0 whitespace-normal hidden mo:block">
+        <p className="mt-[10px] text-md float-left  text-justify text-[#222222] font-serif line-clamp-2 mr-11 mt-4 sm:float-none sm:mr-0 whitespace-normal hidden mo:block">
           {wordLength(category?.detail.description)}
         </p>
       </div>
