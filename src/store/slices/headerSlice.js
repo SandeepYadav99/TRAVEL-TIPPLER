@@ -1,16 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  searchQuery: "",
+  searchQuery: {
+    inputValue: ''
+  },
   filteredCategories: [],
 };
 
 const headerSlice = createSlice({
-  name: "loader",
+  name: "header",
   initialState,
   reducers: {
     updateSearchQuery: (state, action) => {
       state.searchQuery = action.payload;
+
+    },
+    clearSearchQuery: (state, action) => {
+      state.searchQuery = ""
     },
     updateFilteredCategories: (state, action) => {
       state.filteredCategories = action.payload;
@@ -18,7 +24,6 @@ const headerSlice = createSlice({
   },
 });
 
-export const { updateSearchQuery, updateFilteredCategories } =
-  headerSlice.actions;
+export const headerActions = headerSlice.actions;
 
 export default headerSlice.reducer;

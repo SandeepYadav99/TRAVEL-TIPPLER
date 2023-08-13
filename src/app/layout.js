@@ -3,8 +3,8 @@ import { Provider } from "react-redux";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { store } from "@/store/sotres";
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
+import Header from "@/components/layouts/Header/Header";
+import Footer from "@/components/layouts/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

@@ -16,7 +16,7 @@ export const metadata = {
 
 const Itinerary = () => {
   return (
-    <div className="md:flex md:justify-between mx-[5%] md:mt-2">
+    <div className="md:flex md:justify-between mx-[5%] md:mt-2 bg-white">
       <div className="">
         <div className="mt-4">
           <h1 className="text-2xl font-bold ml-[2%]">Travel Itinerary</h1>
