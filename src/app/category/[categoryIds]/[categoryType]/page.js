@@ -9,7 +9,7 @@ const CategoryTypes = () => {
   const params = useParams();
 
   return (
-    <div className="bg-white shadow-lg  w-full mt-8 h-full mx-auto lg:w-[80%]">
+    <div className="bg-white shadow-lg  w-full mt-2  mx-auto lg:w-[80%] ">
       {CATEGORYs.map((category) => {
         if (category.id == params.categoryType) {
           return (
@@ -17,12 +17,12 @@ const CategoryTypes = () => {
               <div>
                 <Link
                   href={`/category/${params.categoryIds}`}
-                  className="bg-blue-400 p-2 font-bold text-2xl text-white rounded-md hover:bg-gray-500"
+                  className="bg-blue-400 p-1  text-xl text-white rounded-sm hover:bg-black"
                 >
                   {category.category}
                 </Link>
               </div>
-              <h1 className="mt-4 text-3xl font-bold">{category.heading}</h1>
+              <h1 className="mt-4 text-[27px] font-bold">{category.heading}</h1>
               <p className="mt-3 text-xl font-bold">
                 {`Posted by ${category.aurther} - ${category.date}`}
               </p>

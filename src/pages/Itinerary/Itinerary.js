@@ -23,7 +23,7 @@ const Itinerary = () => {
         </div>
         {CATEGORYs.map((category, index) => {
           if (category.category === "Travel Itinerary") {
-            return <Category_Post category={category} key={index} />;
+            return <Category_Post id={category.id} key={category.id} description={category.detail.description} date={category.date} image={category.image} category={category.category} aurther={category.aurther} heading={category.heading} />;
           }
           return null;
         })}

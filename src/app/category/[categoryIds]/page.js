@@ -14,7 +14,7 @@ const CategoryIds = () => {
 
   return (
     <div className="md:flex md:justify-between mx-[5%] md:mt-2 ">
-      <div className="">
+      <div className=" sm:w-max-[1160px] bg-white h-auto">
         <div className="mt-4">
           <h1 className="text-2xl font-bold ml-[2%]">{paramsList}</h1>
         </div>
@@ -22,7 +22,7 @@ const CategoryIds = () => {
         {CATEGORYs.map((category, index) => {
           if (category.category === paramsList) {
             return (
-              <Category_Post category={category ?? " "} key={category.id} />
+              <Category_Post  id={category.id} key={category.id} description={category.detail.description} date={category.date} image={category.image} category={category.category} aurther={category.aurther} heading={category.heading}/>
             );
           }
           return null;
