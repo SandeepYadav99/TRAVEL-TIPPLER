@@ -48,7 +48,7 @@ const Banner = () => {
     <div className=" flex justify-between items-center mx-[4%] overflow-hidden " onMouseOver={handalMouse_Enter} onMouseLeave={handalMouse_Leave}>
       <div className=" absolute z-10  ">
         <button
-          className={isActiveButton ? "cursor-pointer  bg-gray-500 p-2 rounded-sm " : "hidden"}
+          className={isActiveButton ? "cursor-pointer  bg-[#0000004D] p-2 rounded-sm " : "hidden"}
           onClick={previous}
         >
           <Image src={ImgPrev} alt="Travel" />
@@ -94,7 +94,6 @@ const Banner = () => {
               </p>
             </Link>
           </div>
-
           <div className="">
             <Image
               src={manali}
@@ -117,7 +116,7 @@ const Banner = () => {
         </Slider>
       </div>
       <div className="absolute z-10 right-0 p-[5%] z ">
-        <button className={isActiveButton ? "cursor-pointer  bg-gray-500 p-2 rounded-sm -mr-2" : "hidden"} onClick={next}>
+        <button className={isActiveButton ? "cursor-pointer  bg-[#0000004D] p-2 rounded-sm -mr-2" : "hidden"} onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
       </div>
