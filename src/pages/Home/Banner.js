@@ -43,7 +43,6 @@ const Banner = () => {
     autoplaySpeed: 3000,
   };
 
-  console.log(isActive)
   return (
     <div className=" flex justify-between items-center mx-[4%] overflow-hidden " onMouseOver={activeHandler} onMouseLeave={inActiveHandler}>
       <div className=" absolute z-10  ">
