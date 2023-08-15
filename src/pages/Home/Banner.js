@@ -11,17 +11,18 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Banner = () => {
-  const [isActive, setIsActive] = useState(false)
+  const [isActiveButton, setIsActiveButton] = useState(false)
   const router = useRouter();
   const slider = useRef();
 
-  const activeHandler = () => {
-    setIsActive(true)
+  const handalMouse_Enter = () => {
+    setIsActiveButton(true)
   }
 
-  const inActiveHandler = () => {
-    setIsActive(false)
+  const handalMouse_Leave = () => {
+    setIsActiveButton(false)
   }
+
   const previous = () => {
     slider.current.slickPrev();
   };
@@ -44,10 +45,10 @@ const Banner = () => {
   };
 
   return (
-    <div className=" flex justify-between items-center mx-[4%] overflow-hidden " onMouseOver={activeHandler} onMouseLeave={inActiveHandler}>
+    <div className=" flex justify-between items-center mx-[4%] overflow-hidden " onMouseOver={handalMouse_Enter} onMouseLeave={handalMouse_Leave}>
       <div className=" absolute z-10  ">
         <button
-          className={isActive ? "cursor-pointer  bg-gray-500 p-2 rounded-sm " : "hidden"}
+          className={isActiveButton ? "cursor-pointer  bg-gray-500 p-2 rounded-sm " : "hidden"}
           onClick={previous}
         >
           <Image src={ImgPrev} alt="Travel" />
@@ -116,7 +117,7 @@ const Banner = () => {
         </Slider>
       </div>
       <div className="absolute z-10 right-0 p-[5%] z ">
-        <button className={isActive ? "cursor-pointer  bg-gray-500 p-2 rounded-sm -mr-2" : "hidden"} onClick={next}>
+        <button className={isActiveButton ? "cursor-pointer  bg-gray-500 p-2 rounded-sm -mr-2" : "hidden"} onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
       </div>
