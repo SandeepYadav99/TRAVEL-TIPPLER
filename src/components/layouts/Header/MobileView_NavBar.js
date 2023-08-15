@@ -15,7 +15,6 @@ const MobileView_NavBar = ({closeHandler, mobileMenuVisible}) => {
       >
         <IconClose fill={"black"} />
       </button>
-
     <div className=" ">
       <div className="bg-white text-black py-2 px-4 ">
         <div className="mr-4 text-[18px] py-2 ">
@@ -46,7 +45,6 @@ const MobileView_NavBar = ({closeHandler, mobileMenuVisible}) => {
           </Link>
         </div>
       </div>
-     
     </div>
   </div>
   )
