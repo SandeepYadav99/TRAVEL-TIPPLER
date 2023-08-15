@@ -12,16 +12,15 @@ const Search_Result = () => {
     const query = useParams();
 
     const Search_Results = CATEGORYs?.filter((category) => {
-        return category.heading.includes(query.searchId) || category.detail.description.includes(query.searchId)
+        return category.heading.includes(query?.searchId) || category.detail.description.includes(query?.searchId)
     })
-
 
     return (
         <div className="mx-[4%] sm:flex shadow-md ">
             <div>
                 <div className=" sm:w-max-[1160px] bg-white h-auto">
                     <div className="p-[20px]">
-                        <h2 className="text-2xl font-semibold">Search results for: {query.searchId}</h2>
+                        <h2 className="text-2xl font-semibold">Search results for: {query?.searchId}</h2>
                         <hr className="m-[2px]" />
                     </div>
                     {Search_Results?.length <= 0 && <p className="mx-[2%]  pb-2 text-md">Sorry, but nothing matched your search terms. Please try again with different keywords.</p>}

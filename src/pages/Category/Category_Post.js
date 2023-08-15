@@ -21,6 +21,7 @@ const Category_Post = ({ id, image,category,  aurther,heading , date, descriptio
   const headingHandler = (id) => {
     router.push(`/category/${categoryType}/${id}`);
   };
+  
   return (
     <div key={id} className="">
      
@@ -35,7 +36,7 @@ const Category_Post = ({ id, image,category,  aurther,heading , date, descriptio
           />
           <Link
             href={`/category/${categoryType}`}
-            className="sm:block hidden float-left absolute z-10 text-sm m-2 text-bold text-left top-0 font-serif bg-[#0000004D]  text-white px-[6px] rounded-sm"
+            className="sm:block hidden float-left absolute z-10 text-sm m-2 text-bold text-left top-0 font-serif bg-[#0000004D] hover:bg-[#777777] text-white px-[6px] rounded-sm"
           >
             {category}
           </Link>

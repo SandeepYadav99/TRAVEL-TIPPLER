@@ -1,5 +1,5 @@
 "use client";
-import React, { Component, useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import BannerPage from "@/assets/Banner/Banaras-1.jpg";
@@ -11,9 +11,17 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const [isActive, setIsActive] = useState(false)
   const router = useRouter();
   const slider = useRef();
 
+  const activeHandler = () => {
+    setIsActive(true)
+  }
+
+  const inActiveHandler = () => {
+    setIsActive(false)
+  }
   const previous = () => {
     slider.current.slickPrev();
   };
@@ -35,23 +43,20 @@ const Banner = () => {
     autoplaySpeed: 3000,
   };
 
+  console.log(isActive)
   return (
-    // <div className="w-full mx-auto flex justify-center items-center -mt-8 relative m-[2%] ">
-    <div className=" flex justify-between items-center mx-[4%] overflow-hidden ">
-      {/*  */}
+    <div className=" flex justify-between items-center mx-[4%] overflow-hidden " onMouseOver={activeHandler} onMouseLeave={inActiveHandler}>
       <div className=" absolute z-10  ">
-        {/*  */}
         <button
-          className="cursor-pointer  hover:bg-gray-500 p-2 rounded-sm "
+          className={isActive ? "cursor-pointer  bg-gray-500 p-2 rounded-sm " : "hidden"}
           onClick={previous}
         >
           <Image src={ImgPrev} alt="Travel" />
         </button>
       </div>
-      {/* <div className="w-full lg:w-[85%] mt-[4%] lg:mt-[2%] p-3 "> */}
       <div className="w-full  mt-2 ">
-        <Slider {...settings} ref={slider} className="">
-          <div className="">
+        <Slider {...settings} ref={slider} className="" >
+          <div className="" >
             <Image
               src={BannerPage}
               alt="banner"
@@ -59,7 +64,7 @@ const Banner = () => {
             />
             <a
               onClick={() => router.push("/category/travel-blogs")}
-              className= " bg-blue-500 absolute bottom-16 ml-4 font-normal text-white  hover:bg-[#0000004d] cursor-pointer  font-lg rounded"
+              className=" bg-blue-500 absolute bottom-16 ml-4 font-normal text-white  hover:bg-[#0000004d] cursor-pointer  font-lg rounded"
             >
               Travel Blogs
             </a>
@@ -111,8 +116,8 @@ const Banner = () => {
           </div>
         </Slider>
       </div>
-      <div className="absolute z-10 right-0 p-[5%]  ">
-        <button className="cursor-pointer hover:bg-gray-500 p-2 rounded-sm" onClick={next}>
+      <div className="absolute z-10 right-0 p-[5%] z ">
+        <button className={isActive ? "cursor-pointer  bg-gray-500 p-2 rounded-sm -mr-2" : "hidden"} onClick={next}>
           <Image src={ImgNext} alt="Travel " className=" " />
         </button>
       </div>

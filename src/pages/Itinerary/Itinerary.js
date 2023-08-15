@@ -16,10 +16,11 @@ export const metadata = {
 
 const Itinerary = () => {
   return (
-    <div className="md:flex md:justify-between mx-[5%] md:mt-2 bg-white">
-      <div className="">
-        <div className="mt-4">
-          <h1 className="text-2xl font-bold ml-[2%]">Travel Itinerary</h1>
+    <div className="md:flex md:justify-between mx-[5%] md:mt-2  ">
+      <div className="bg-white ">
+        <div className="mt-4 ">
+          <h1 className="text-[19px]  font-semibold ml-[2%]">Travel Itinerary</h1>
+          <hr className="mx-[4px] " />
         </div>
         {CATEGORYs.map((category, index) => {
           if (category.category === "Travel Itinerary") {
@@ -28,7 +29,7 @@ const Itinerary = () => {
           return null;
         })}
       </div>
-      <div className="">
+      <div className="sm:w-[35rem] mt-2">
         <Follow />
         <RecentPost />
         <CategorysList />
