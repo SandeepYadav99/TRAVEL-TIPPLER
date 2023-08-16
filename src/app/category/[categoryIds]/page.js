@@ -11,7 +11,7 @@ import Category_Post from "@/pages/Category/Category_Post";
 const CategoryIds = () => {
   const params = useParams();
   const paramsList = formatCategory(params.categoryIds);
-
+console.log(paramsList)
   return (
     <div className="md:flex md:justify-between mx-[5%] md:mt-2 ">
       <div className=" sm:w-max-[1160px] bg-white h-auto">
