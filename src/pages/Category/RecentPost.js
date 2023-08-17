@@ -27,7 +27,7 @@ const RecentPost = () => {
                 height={80}
                 width={80}
                 alt=""
-                className=" rounded-md float-left cursor-pointer mr-5"
+                className=" rounded-md float-left cursor-pointer mo:mr-5 mr-1.5"
               />
                 <a
                   onClick={() => categoryHandler(category)}
