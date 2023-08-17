@@ -13,7 +13,7 @@ const CategorysList = () => {
   }, {});
 
   return (
-    <div className="bg-white shadow-sm  mt-4 m-[2%] p-[20px]">
+    <div className="bg-white shadow-sm  mt-4 m-[2%] p-1">
       <h1 className="text-[17px]  font-black mt-4 pb-[10px]">Category</h1>
       <hr className="mx-2" />
       {Object.entries(categoryCounts).map(([category, count]) => {

@@ -10,7 +10,7 @@ const SocialLinks = () => {
       <h1 className="text-[17px] font-bold   pb-[10px]">Follow Us</h1>
       <hr className="" />
       {/* lg:grid md:grid-cols-2 m-[2%] md:w-[30vw] */}
-      <div className="flex justify-between items-center flex-wrap ">
+      <div className="flex  justify-between items-center flex-wrap ">
         <li className="flex justify-center m-3 items-center cursor-pointer transition-transform transform hover:scale-110">
           <Image
             src={Twitter}

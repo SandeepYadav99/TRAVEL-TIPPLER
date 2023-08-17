@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import CATEGORYs from "@/components/helper/CATEGORYs";
 import formatCategory from "@/components/hooks/ConvertSmall";
 import Follow from "@/pages/Category/Social_Links";
@@ -10,8 +10,9 @@ import Category_Post from "@/pages/Category/Category_Post";
 
 const CategoryIds = () => {
   const params = useParams();
+  const path= usePathname()
   const paramsList = formatCategory(params.categoryIds);
-console.log(paramsList)
+console.log(path)
   return (
     <div className="md:flex md:justify-between mx-[5%] md:mt-2 ">
       <div className=" sm:w-max-[1160px] bg-white h-auto">
@@ -28,7 +29,7 @@ console.log(paramsList)
           return null;
         })}
       </div>
-      <div className="">
+      <div className="sm:w-[35rem] mt-2">
         <Follow />
         <RecentPost />
         <CategorysList />

@@ -15,7 +15,7 @@ const RecentPost = () => {
   };
 
   return (
-    <div className="bg-white shadow-sm   mt-4 mx-[2%] p-[20px]">
+    <div className="bg-white shadow-sm   mt-4 mx-[2%] p-1">
       <h1 className="text-[17px] font-bold mt-4 pb-[10px]">Recent Posts</h1>
       <hr className="m-[4%]" />
       {CATEGORYs.map((category, index) => {

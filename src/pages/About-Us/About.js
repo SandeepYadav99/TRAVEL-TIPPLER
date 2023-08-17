@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="flex justify-center items-center mt-2  p-2">
-      <div className="w-full bg-white shadow-xl ">
+      <div className="w-full bg-white shadow-xl p-5">
         <div className="m-[2%]">
           <h1 className="text-[24px] font-bold text-left m-4">
             Welcome to TravelTippler – Your Journey Begins Here!

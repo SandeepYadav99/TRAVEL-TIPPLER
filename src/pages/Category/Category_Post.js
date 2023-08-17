@@ -25,11 +25,11 @@ const Category_Post = ({ id, image,category,  aurther,heading , date, descriptio
   return (
     <div key={id} className="">
      
-      <div className="p-5 w-full ">
+      <div className="mo:p-1 pt-1 w-full ">
         <div className="relative m-3 cursor-pointer ">
           <Image
             src={image}
-            className="rounded-md mr-5 float-left sm:w-[330px] sm:h-[220px] mb-4 mo:w-[150px] mo:h-[120px] "
+            className="rounded-md mo:mr-5 mr-1.5 float-left w-[90px] h-[90px] sm:w-[330px] sm:h-[220px] mb-4 mo:w-[150px] mo:h-[120px] "
             alt="Travel"
             width={80}
             height={80}
@@ -43,16 +43,16 @@ const Category_Post = ({ id, image,category,  aurther,heading , date, descriptio
           <div className="flex flex-col  ">
             <a
               onClick={() => headingHandler(id)}
-              className="text-2xl font-bold  hover:text-blue-600 cursor-pointer line-clamp-3"
+              className="mo:text-[20px] text-[#000] font-semibold w-full hover:text-blue-600 cursor-pointer line-clamp-3"
             >
               {heading}
             </a>
 
             <div className=" text-gray-400  flex w-full ">
-              <p className=" text-black font-medium text-md font-serif ">
+              <p className=" text-black font-medium text-md font-serif hidden mo:block">
                 {aurther}
               </p>
-              <strong className="text-gray-[#999999] ml-3 text-sm">{date}</strong>
+              <strong className="text-gray-[#999999] mo:ml-3 mo:text-sm">{date}</strong>
             </div>
           </div>
         </div>
