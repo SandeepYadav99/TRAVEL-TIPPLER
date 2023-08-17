@@ -7,7 +7,8 @@ import CategorysList from "./CategorysList";
 import Category_Post from "./Category_Post";
 
 
-const Category = () => {
+const Category = ({fetch_categories}) => {
+console.log(fetch_categories)
   return (
     <div className="mx-[4%] sm:flex shadow-md ">
       <div className="">
@@ -29,7 +30,7 @@ const Category = () => {
       <div className="sm:w-[35rem] mt-2">
         <Follow />
         <RecentPost />
-        <CategorysList />
+        <CategorysList fetch_categories={fetch_categories}/>
       </div>
     </div>
   );

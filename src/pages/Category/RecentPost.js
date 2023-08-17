@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 
 const RecentPost = () => {
+ 
   const router = useRouter();
 
   const categoryHandler = (category) => {
@@ -35,7 +36,7 @@ const RecentPost = () => {
                 >
                   {category.heading}
                 </a>
-                <p className="text-sm font-light text-gray-600 sm:text-center ">{category.date}</p>
+                <p className="text-sm font-light text-gray-600  ">{category.date}</p>
            
             </div>
             <hr className="m-[3%] " />
