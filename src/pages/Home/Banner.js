@@ -60,7 +60,7 @@ const Banner = () => {
             <Image
               src={BannerPage}
               alt="banner"
-              className="relative w-full h-[60vh] rounded-lg md:w-full"
+              className="relative w-full h-[15vh] mo:h-[60vh] rounded-lg md:w-full"
             />
             <a
               onClick={() => router.push("/category/travel-blogs")}
@@ -80,7 +80,7 @@ const Banner = () => {
             <Image
               src={Travel}
               alt="banner"
-              className="relative w-full h-[60vh] rounded-lg md:w-full"
+              className="relative w-full h-[15vh] mo:h-[60vh] rounded-lg md:w-full"
             />
             <a
               onClick={() => router.push("/category/health-travel")}
@@ -98,7 +98,7 @@ const Banner = () => {
             <Image
               src={manali}
               alt="banner"
-              className="relative w-full h-[60vh] rounded-lg md:w-full"
+              className="relative w-full h-[15vh] mo:h-[60vh] rounded-lg md:w-full"
             />
             <a
               onClick={() => router.push("/category/travel-itinerary")}
