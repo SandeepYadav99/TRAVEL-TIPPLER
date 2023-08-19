@@ -18,8 +18,8 @@ const CategorysList = ({ fetch_categories }) => {
               <Link
                 href={`/category/${slug}`}
                 className="text-[16px] courser-pointer "
+                dangerouslySetInnerHTML={{__html:  name}}
               >
-                {name}
               </Link>
               
               <p className="border-2 rounded-md h-6 w-6 flex justify-center text-[11px] bg-gray-100 ">{count}</p>

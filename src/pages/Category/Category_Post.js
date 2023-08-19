@@ -7,7 +7,7 @@ import useCategoryName from "@/components/hooks/ConvertCaps";
 import { useRouter } from "next/navigation";
 
 const Category_Post = ({ id, image,category,  aurther,heading , date, description}) => {
-
+ 
   const router = useRouter();
 
   const categoryType = useCategoryName(category);
