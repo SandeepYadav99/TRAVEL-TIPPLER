@@ -6,8 +6,8 @@ import getFirstTwoLines from "@/components/hooks/ConvertWordLength";
 import useCategoryName from "@/components/hooks/ConvertCaps";
 import { useRouter } from "next/navigation";
 
-const Category_Post = ({ id, image,category,  aurther,heading , date, description}) => {
- 
+const Category_Post = ({ id, image, category, aurther, heading, date, description }) => {
+
   const router = useRouter();
 
   const categoryType = useCategoryName(category);
@@ -21,10 +21,10 @@ const Category_Post = ({ id, image,category,  aurther,heading , date, descriptio
   const headingHandler = (id) => {
     router.push(`/category/${categoryType}/${id}`);
   };
-  
+
   return (
     <div key={id} className="">
-     
+
       <div className="mo:p-1 pt-1 w-full ">
         <div className="relative m-3 cursor-pointer ">
           <Image

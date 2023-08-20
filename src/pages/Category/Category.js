@@ -6,9 +6,8 @@ import RecentPost from "./RecentPost";
 import CategorysList from "./CategorysList";
 import Category_Post from "./Category_Post";
 
-
 const Category = ({fetch_categories}) => {
-console.log(fetch_categories)
+
   return (
     <div className="mx-[4%] sm:flex shadow-md ">
       <div className="">
