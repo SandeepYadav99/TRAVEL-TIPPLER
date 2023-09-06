@@ -10,3 +10,4 @@ const formatCategory = (category) => {
 };
 
 export default formatCategory;
+

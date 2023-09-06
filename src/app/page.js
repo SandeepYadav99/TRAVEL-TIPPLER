@@ -8,26 +8,26 @@ export const metadata = {
 };
 
 const Home =  async () => {
-  const fetch_categories = await fetchCategory();
-  const fetch_PostLists = await fetchPostLists()
+  // const fetch_categories = await fetchCategory();
+  // const fetch_PostLists = await fetchPostLists()
   return (
     <div className="">
       <Banner />
-      <Category fetch_categories={fetch_categories} fetch_PostLists={fetch_PostLists}/>
+      <Category />
     </div>
   );
 };
 
 export default Home;
 
-export const fetchCategory =async () => {
-  const data = await fetch("https://www.traveltippler.com/wp-json/wp/v2/categories");
-  const responseData = await data.json();
-  return responseData
-}
+// export const fetchCategory =async () => {
+//   const data = await fetch("https://www.traveltippler.com/wp-json/wp/v2/categories");
+//   const responseData = await data.json();
+//   return responseData
+// }
 
-export const fetchPostLists = async () => {
-  const data = await fetch("https://www.traveltippler.com/wp-json/wp/v2/posts");
-  const responseData = await data.json();
-  return responseData
-}
+// export const fetchPostLists = async () => {
+//   const data = await fetch("https://www.traveltippler.com/wp-json/wp/v2/posts");
+//   const responseData = await data.json();
+//   return responseData
+// }

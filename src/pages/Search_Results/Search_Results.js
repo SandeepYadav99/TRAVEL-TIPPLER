@@ -26,7 +26,7 @@ const Search_Result = () => {
                     {Search_Results?.length <= 0 && <p className="mx-[2%]  pb-2 text-md">Sorry, but nothing matched your search terms. Please try again with different keywords.</p>}
                     {Search_Results?.map((category, index) => {
                         return <>
-                            <Category_Post id={category.id} key={category.id} description={category.detail.description} date={category.date} image={category.image} category={category.category} aurther={category.aurther} heading={category.heading} />;
+                            <Category_Post fetch_PostLists={category} key={category.id}/>;
                         </>
                     })}
                 </div>
